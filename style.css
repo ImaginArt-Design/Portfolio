@@ -720,6 +720,8 @@ html[lang="ar"] .back-to-top {
 
 .marquee-content {
     display: inline-flex;
+    flex-wrap: nowrap;
+    width: max-content;
     align-items: center;
     animation: marquee 40s linear infinite;
     will-change: transform;
@@ -841,4 +843,12 @@ html[lang="ar"] .quote {
     .hamburger.active span:nth-child(1) { transform: translateY(9px) rotate(45deg); }
     .hamburger.active span:nth-child(2) { opacity: 0; }
     .hamburger.active span:nth-child(3) { transform: translateY(-9px) rotate(-45deg); }
+    
+    /* Mobile Size Fixes */
+    .skill-icon { font-size: 2.5rem; }
+    .skill-icon img { width: 2.5rem; height: 2.5rem; }
+    .hero-content h1 { font-size: 3.5rem; }
+    .hero-content h2 { font-size: 1.5rem; }
+    .hero-content p { font-size: 1.1rem; }
+    .typewriter, .typewriter-cursor { font-size: 1.1rem; white-space: nowrap; }
 }
