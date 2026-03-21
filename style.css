@@ -15,13 +15,12 @@
 
 html {
     scroll-behavior: smooth;
-    font-family: 'Outfit', sans-serif;
+    font-family: 'Outfit', 'Tajawal', sans-serif;
     background-color: var(--dark);
     color: var(--cream);
 }
 
 html[lang="ar"] {
-    font-family: 'Cairo', sans-serif;
     direction: rtl;
     text-align: right;
 }
@@ -425,7 +424,6 @@ html[lang="ar"] .discipline-item:hover {
     display: inline-block;
 }
 html[lang="ar"] .signature-font {
-    font-family: 'Cairo', sans-serif;
     letter-spacing: 0;
     font-size: 1.1em;
 }
@@ -762,9 +760,6 @@ html[lang="ar"] .back-to-top {
 
 html[lang="ar"] .marquee-content {
     animation-direction: reverse;
-}
-html[lang="ar"] .quote {
-    font-family: 'Cairo', sans-serif;
 }
 
 /* Tooltips */
