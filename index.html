@@ -56,7 +56,7 @@
                         </g>
                     </g>
                 </svg>
-                <span>ImaginArt</span>
+                <span>IMAGINART</span>
             </div>
             <ul class="nav-links">
                 <li><a href="#hero" data-i18n="navHome">Home</a></li>
@@ -82,41 +82,69 @@
             <div class="hero-content">
                 <h1 class="fade-in" data-i18n="heroTitle">ImaginArt</h1>
                 <h2 class="fade-in-delay" data-i18n="heroSubtitle">by Laabidi Abdelghani</h2>
-                <p class="fade-in-delay-2" data-i18n="heroDesc">Transforming ideas into visually stunning realities.</p>
+                <p class="fade-in-delay-2">
+                    <span data-i18n="heroDescStart">Transforming ideas into</span>&nbsp;<span class="typewriter" id="typewriter"></span><span class="typewriter-cursor">|</span>
+                </p>
                 <a href="#projects" class="btn primary-btn fade-in-delay-3" data-i18n="heroBtn">Explore Work</a>
             </div>
             <div class="scroll-indicator">↓</div>
         </section>
+
+        <!-- Quotes Marquee -->
+        <div class="marquee-container fade-in-delay-3">
+            <div class="marquee-content">
+                <!-- Group 1 -->
+                <span class="quote">"Design is the silent ambassador of your brand." <span class="author">— Paul Rand</span></span>
+                <span class="quote-separator">✦</span>
+                <span class="quote">"Styles come and go. Good design is a language, not a style." <span class="author">— Massimo Vignelli</span></span>
+                <span class="quote-separator">✦</span>
+                <span class="quote">"Simplicity is the ultimate sophistication." <span class="author">— Leonardo da Vinci</span></span>
+                <span class="quote-separator">✦</span>
+                <span class="quote">"Design is not just what it looks like and feels like. Design is how it works." <span class="author">— Steve Jobs</span></span>
+                <span class="quote-separator">✦</span>
+                <!-- Group 2 (Duplicate for seamless loop) -->
+                <span class="quote">"Design is the silent ambassador of your brand." <span class="author">— Paul Rand</span></span>
+                <span class="quote-separator">✦</span>
+                <span class="quote">"Styles come and go. Good design is a language, not a style." <span class="author">— Massimo Vignelli</span></span>
+                <span class="quote-separator">✦</span>
+                <span class="quote">"Simplicity is the ultimate sophistication." <span class="author">— Leonardo da Vinci</span></span>
+                <span class="quote-separator">✦</span>
+                <span class="quote">"Design is not just what it looks like and feels like. Design is how it works." <span class="author">— Steve Jobs</span></span>
+                <span class="quote-separator">✦</span>
+            </div>
+        </div>
 
         <section id="about" class="about-section">
             <div class="section-container">
                 <h2 class="section-title" data-i18n="aboutTitle">About Me</h2>
                 <div class="about-grid">
                     <div class="about-text glass-card">
-                        <p data-i18n="aboutText">Hello! I am Laabidi Abdelghani, the creative mind behind ImaginArt. I am a passionate graphic designer dedicated to bridging the gap between imagination and digital canvas. My work is defined by precision, beautiful aesthetics, and meaningful user interactions.</p>
+                        <p data-i18n="aboutText">Hello! I am Laabidi Abdelghani, the creative mind behind ImaginArt. With over 8 years of experience, I am a passionate graphic designer who bridges the gap between digital imagination and physical reality. Having deep-dived into the world of printing and manufacturing, I now oversee projects from the first conceptual drawing all the way to the final tangible product. I personally handle manual printing and crafting on a daily basis, an immersive hands-on process that has profoundly sharpened my design sensibilities and creative vision.</p>
                     </div>
-                    <div class="skills-bars glass-card">
+                    <div class="core-disciplines glass-card">
                         <h3 data-i18n="coreDisciplines">Core Disciplines</h3>
-                        <div class="skill-bar-container">
-                            <span class="skill-label" data-i18n="skill1">Graphic & Logo Design</span>
-                            <div class="bar"><div class="progress" data-width="95%"></div></div>
-                        </div>
-                        <div class="skill-bar-container">
-                            <span class="skill-label" data-i18n="skill2">Brand Guidelines</span>
-                            <div class="bar"><div class="progress" data-width="95%"></div></div>
-                        </div>
-                        <div class="skill-bar-container">
-                            <span class="skill-label" data-i18n="skill3">Signage Creation</span>
-                            <div class="bar"><div class="progress" data-width="90%"></div></div>
-                        </div>
-                        <div class="skill-bar-container">
-                            <span class="skill-label" data-i18n="skill4">3D Lettering & Neon</span>
-                            <div class="bar"><div class="progress" data-width="90%"></div></div>
-                        </div>
-                        <div class="skill-bar-container">
-                            <span class="skill-label" data-i18n="skill5">Laser & CNC File Prep.</span>
-                            <div class="bar"><div class="progress" data-width="85%"></div></div>
-                        </div>
+                        <ul class="disciplines-list">
+                            <li class="discipline-item">
+                                <span class="discipline-icon">✦</span>
+                                <span class="discipline-label" data-i18n="skill1">Graphic & Logo Design</span>
+                            </li>
+                            <li class="discipline-item">
+                                <span class="discipline-icon">✦</span>
+                                <span class="discipline-label" data-i18n="skill2">Brand Guidelines</span>
+                            </li>
+                            <li class="discipline-item">
+                                <span class="discipline-icon">✦</span>
+                                <span class="discipline-label" data-i18n="skill3">Signage Creation</span>
+                            </li>
+                            <li class="discipline-item">
+                                <span class="discipline-icon">✦</span>
+                                <span class="discipline-label" data-i18n="skill4">3D Lettering & Neon</span>
+                            </li>
+                            <li class="discipline-item">
+                                <span class="discipline-icon">✦</span>
+                                <span class="discipline-label" data-i18n="skill5">Laser & CNC File Prep.</span>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -161,9 +189,6 @@
                             <input type="text" id="name" data-i18n-placeholder="contactNamePlaceholder" placeholder="Name" required>
                         </div>
                         <div class="form-group">
-                            <input type="email" id="email" data-i18n-placeholder="contactEmailPlaceholder" placeholder="Email Address" required>
-                        </div>
-                        <div class="form-group">
                             <textarea id="message" rows="5" data-i18n-placeholder="contactMessagePlaceholder" placeholder="Project Details" required></textarea>
                         </div>
                         <button type="submit" class="btn primary-btn submit-btn" data-i18n="contactBtn">Send Message</button>
@@ -173,8 +198,20 @@
         </section>
     </main>
 
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top" id="back-to-top" aria-label="Back to top">
+        <svg viewBox="0 0 24 24"><path fill="currentColor" d="M7.41,15.41L12,10.83L16.59,15.41L18,14L12,8L6,14L7.41,15.41Z" /></svg>
+    </a>
+
     <footer>
         <div class="footer-content">
+            <div class="social-links">
+                <a href="#" target="_blank" aria-label="Instagram"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4C4,18.39 5.61,20 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6C20,5.61 18.39,4 16.4,4H7.6M17.25,5.5A1.25,1.25 0 0,1 18.5,6.75A1.25,1.25 0 0,1 17.25,8A1.25,1.25 0 0,1 16,6.75A1.25,1.25 0 0,1 17.25,5.5M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z"/></svg></a>
+                <a href="#" target="_blank" aria-label="Pinterest"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M9.04,21.54C10,21.83 10.97,22 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2A10,10 0 0,0 2,12C2,16.25 4.67,19.9 8.44,21.34C8.35,20.56 8.26,19.27 8.44,18.38L9.59,13.44C9.59,13.44 9.3,12.86 9.3,11.94C9.3,10.56 10.16,9.53 11.14,9.53C12,9.53 12.4,10.16 12.4,10.97C12.4,11.84 11.83,13.23 11.54,14.53C11.29,15.57 12.05,16.42 13.12,16.42C15.06,16.42 16.5,14.33 16.5,11C16.5,8.12 14.55,6 11.77,6C8.59,6 6.77,8.45 6.77,11.16C6.77,12.06 7.14,13 7.6,13.56C7.66,13.62 7.66,13.67 7.64,13.77L7.33,15.03C7.3,15.17 7.21,15.2 7.07,15.13C5.69,14.45 4.88,12.56 4.88,10.94C4.88,7.66 7.37,4.6 12.04,4.6C15.82,4.6 18.66,7.24 18.66,10.74C18.66,14.47 16.29,17.47 13.28,17.47C12.18,17.47 11.16,16.9 10.8,16.34L10.15,18.81C9.91,19.74 9.35,20.89 9.04,21.54Z"/></svg></a>
+                <a href="#" target="_blank" aria-label="Behance"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M22,7H15V9H22M21.5,14H15.14V14C15.14,15.7 16.57,17.06 18.28,17.06C19.5,17.06 20.62,16.32 21.09,15.19L22.9,16.29C22.04,18.26 20.31,19.26 18.29,19.26C16.89,19.26 15.61,18.72 14.61,17.75C13.59,16.73 13.04,15.35 13.04,13.88C13.04,8.5 24.11,8.38 23.47,15.39C23.47,15.42 22,14 21.5,14M15.2,12.5H21.28C21.13,11 20.25,9 18.17,9C16.53,9 15.34,10.74 15.2,12.5M2,19V5H8.38C10.28,5 11.53,5.66 12.2,6.72C12.63,7.44 12.8,8.23 12.8,9.07C12.8,10.42 12.17,11.5 11.18,12.1C12.44,12.71 13.23,13.92 13.23,15.38C13.23,17.96 11.23,19 8.21,19H2M4.34,10.72H7.67C9,10.72 9.87,10.27 9.87,9.05C9.87,7.85 9.04,7.4 7.57,7.4H4.34V10.72M4.34,16.72H8.34C10,16.72 10.97,16.14 10.97,14.73C10.97,13.62 10.2,12.72 8.44,12.72H4.34V16.72Z"/></svg></a>
+                <a href="#" target="_blank" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M19 3A2 2 0 0 1 21 5V19A2 2 0 0 1 19 21H5A2 2 0 0 1 3 19V5A2 2 0 0 1 5 3H19M18.5 18.5V13.2A3.26 3.26 0 0 0 15.24 9.94C14.39 9.94 13.4 10.46 12.92 11.24V10.13H10.13V18.5H12.92V13.57C12.92 12.8 13.54 12.17 14.31 12.17A1.4 1.4 0 0 1 15.71 13.57V18.5H18.5M6.88 8.56A1.68 1.68 0 0 0 8.56 6.88C8.56 5.95 7.81 5.19 6.88 5.19A1.69 1.69 0 0 0 5.19 6.88C5.19 7.81 5.95 8.56 6.88 8.56M8.27 18.5V10.13H5.5V18.5H8.27Z"/></svg></a>
+                <a href="#" target="_blank" aria-label="Telegram"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M9.78,18.65L10.06,14.42L17.74,7.5C18.08,7.19 17.67,7.04 17.22,7.31L7.74,13.28L3.64,12C2.76,11.74 2.75,11.14 3.84,10.7L19.81,4.54C20.54,4.21 21.24,4.72 20.96,5.84L18.24,18.65C18.05,19.56 17.5,19.78 16.74,19.36L12.6,16.3L10.61,18.23C10.38,18.46 10.19,18.65 9.78,18.65Z"/></svg></a>
+            </div>
             <p data-i18n="footerText">&copy; 2026 ImaginArt by Laabidi Abdelghani. Designed with perfection.</p>
         </div>
     </footer>
