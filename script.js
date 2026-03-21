@@ -24,7 +24,7 @@ const translations = {
         skillsTitle: "Software Expertise",
         aiMention: "Accelerated & enhanced by the power of Artificial Intelligence tools.",
         projectsTitle: "Selected Projects",
-        projectsEmpty: "No projects added yet. Edit script.js to add your work!",
+        projectsEmpty: "No projects added yet.",
         contactTitle: "Let's Collaborate",
         contactNamePlaceholder: "Name",
         contactEmailPlaceholder: "Email Address",
@@ -56,7 +56,7 @@ const translations = {
         skillsTitle: "Logiciels Maîtrisés",
         aiMention: "Accéléré & amélioré par la puissance des outils d'Intelligence Artificielle.",
         projectsTitle: "Projets Sélectionnés",
-        projectsEmpty: "Aucun projet ajouté pour le moment. Modifiez script.js pour ajouter votre travail !",
+        projectsEmpty: "Aucun projet ajouté pour le moment.",
         contactTitle: "Collaborons Ensemble",
         contactNamePlaceholder: "Nom",
         contactEmailPlaceholder: "Adresse E-mail",
@@ -72,11 +72,11 @@ const translations = {
         navProjects: "المشاريع",
         navContact: "اتصل بي",
         heroTitle: "ImaginArt",
-        heroSubtitle: "بواسطة العبيدي عبدالغني",
+        heroSubtitle: "بواسطة لعبيدي عبد الغني",
         heroDesc: "تحويل الأفكار إلى حقائق بصرية مذهلة.",
         heroBtn: "استكشف أعمالي",
         aboutTitle: "نبذة عني",
-        aboutText: "مرحباً! أنا العبيدي عبدالغني، العقل الإبداعي وراء ImaginArt. مع أكثر من 8 سنوات من الخبرة، أنا مصمم جرافيك شغوف أسعى لسد الفجوة بين الخيال الرقمي والواقع الملموس. من خلال اكتشافي لمجال الطباعة والتنفيذ، أصبحت أتابع المشاريع من مرحلة التصميم الأولي وحتى الإنتاج النهائي. أقوم يومياً بتنفيذ الأعمال والطباعة بيدي، وهي تجربة عملية وحرفية ساهمت في صقل حسّي التصميمي ورؤيتي الإبداعية بشكل مستمر ورفع كفاءتي في الإخراج النهائي.",
+        aboutText: "مرحباً! أنا لعبيدي عبد الغني، العقل الإبداعي وراء ImaginArt. مع أكثر من 8 سنوات من الخبرة، أنا مصمم جرافيك شغوف أسعى لسد الفجوة بين الخيال الرقمي والواقع الملموس. من خلال اكتشافي لمجال الطباعة والتنفيذ، أصبحت أتابع المشاريع من مرحلة التصميم الأولي وحتى الإنتاج النهائي. أقوم يومياً بتنفيذ الأعمال والطباعة بيدي، وهي تجربة عملية وحرفية ساهمت في صقل حسّي التصميمي ورؤيتي الإبداعية بشكل مستمر ورفع كفاءتي في الإخراج النهائي.",
         coreDisciplines: "التخصصات الأساسية",
         skill1: "التصميم الجرافيكي وتصميم الشعارات",
         skill2: "الهوية البصرية (Charte Graphique)",
@@ -88,13 +88,13 @@ const translations = {
         skillsTitle: "خبرات البرامج",
         aiMention: "مدعوم ومُعزّز بقوة أدوات الذكاء الاصطناعي.",
         projectsTitle: "مشاريع مختارة",
-        projectsEmpty: "لم يتم إضافة أي مشاريع حتى الآن. قم بتعديل script.js لإضافة أعمالك!",
+        projectsEmpty: "لم يتم إضافة أي مشاريع حتى الآن.",
         contactTitle: "دعنا نتعاون",
         contactNamePlaceholder: "الاسم",
         contactEmailPlaceholder: "البريد الإلكتروني",
         contactMessagePlaceholder: "تفاصيل المشروع",
         contactBtn: "إرسال رسالة",
-        footerText: "© 2026 ImaginArt بواسطة العبيدي عبدالغني. صُمم بإتقان."
+        footerText: "© 2026 ImaginArt بواسطة لعبيدي عبد الغني. صُمم بإتقان."
     }
 };
 
