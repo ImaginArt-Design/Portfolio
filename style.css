@@ -302,6 +302,43 @@ html[lang="ar"] .lang-switcher {
     padding: 0 20px;
 }
 
+.hero-logo-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+}
+
+.hero-logo-icon {
+    height: 105px;
+    max-width: 85vw;
+    width: auto;
+    filter: drop-shadow(0 0 24px rgba(166,135,99,0.55));
+}
+
+.hero-logo-text {
+    height: 52px;
+    max-width: 85vw;
+    width: auto;
+    filter: drop-shadow(0 0 12px rgba(166,135,99,0.3));
+}
+
+.hero-subtitle-name {
+    font-size: clamp(1.4rem, 3.5vw, 2.6rem);
+    margin-bottom: 25px;
+    color: var(--brown);
+    font-weight: 300;
+}
+
+.hero-typewriter-p {
+    font-size: clamp(1.1rem, 2.4vw, 1.75rem);
+    margin-bottom: 40px;
+    color: var(--cream);
+    font-weight: 400;
+}
+
 .scroll-indicator {
     position: absolute;
     bottom: 20px;
@@ -789,9 +826,46 @@ html[lang="ar"] .marquee-content {
 }
 
 @media (max-width: 768px) {
-    .section-container { padding: 70px 20px; }
-    .glass-card { padding: 2rem; }
-    .contact-card { padding: 2rem; }
+    body, html {
+        overflow-x: hidden;
+    }
+    
+    .section-container { padding: 60px 16px; }
+    .glass-card { padding: 1.5rem; }
+    .contact-card { padding: 1.5rem; }
+    
+    .hero-section {
+        min-height: auto;
+        padding: 100px 16px 50px;
+    }
+
+    .hero-logo-box {
+        gap: 10px;
+        margin-bottom: 18px;
+    }
+
+    .hero-logo-icon {
+        height: 64px;
+    }
+
+    .hero-logo-text {
+        height: 32px;
+    }
+
+    .hero-subtitle-name {
+        font-size: 1.3rem;
+        margin-bottom: 18px;
+    }
+
+    .hero-typewriter-p {
+        font-size: 1rem;
+        margin-bottom: 28px;
+    }
+
+    .btn {
+        padding: 12px 28px;
+        font-size: 0.95rem;
+    }
     
     .hamburger { display: flex; }
     
@@ -800,26 +874,19 @@ html[lang="ar"] .marquee-content {
         top: 100%;
         left: 0;
         width: 100%;
-        background: rgba(45, 45, 45, 0.98);
+        background: rgba(30, 30, 30, 0.98);
         backdrop-filter: blur(15px);
         flex-direction: column;
         align-items: center;
-        padding: 30px 0;
-        gap: 25px;
+        padding: 24px 0;
+        gap: 20px;
         clip-path: circle(0% at top right);
-        transition: all 0.5s ease-in-out;
+        transition: all 0.4s ease-in-out;
         border-bottom: 1px solid var(--brown);
-    }
-    
-    html[lang="ar"] .nav-links {
-        clip-path: circle(0% at top left);
     }
     
     .nav-links.active {
         clip-path: circle(150% at top right);
-    }
-    html[lang="ar"] .nav-links.active {
-        clip-path: circle(150% at top left);
     }
 
     .hamburger.active span:nth-child(1) { transform: translateY(9px) rotate(45deg); }
@@ -828,26 +895,41 @@ html[lang="ar"] .marquee-content {
     
     /* Mobile Size Fixes */
     .skills-grid {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 12px;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
     }
     .skill-item.glass-card {
-        padding: 15px 5px;
+        padding: 14px 8px;
         gap: 8px;
     }
     .skill-name {
+        font-size: 0.82rem;
+    }
+    
+    .marquee-container {
+        width: 100%;
+        margin: 20px 0 40px;
+    }
+
+    .quote {
+        font-size: 1rem;
+    }
+
+    .quote .author {
         font-size: 0.85rem;
     }
-    .skill-icon { font-size: 2rem; }
-    .skill-icon img { width: 2rem; height: 2rem; }
+
+    .quote-separator {
+        margin: 0 25px;
+    }
     
-    .hero-content h1 { font-size: 3.5rem; }
-    .hero-content h2 { font-size: 1.5rem; }
-    .hero-content p { font-size: 1.1rem; }
-    .typewriter, .typewriter-cursor { font-size: 1.1rem; white-space: nowrap; }
-    
-    .social-links a { width: 40px; height: 40px; flex-shrink: 0; }
-    .social-links svg { width: 20px; height: 20px; max-width: 100%; max-height: 100%; }
-    
-    .pattern-bg { opacity: 0.08; } /* Slightly higher opacity on mobile screens */
+    .pattern-bg { opacity: 0.08; }
+}
+
+@media (max-width: 480px) {
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .stat-num { font-size: 1.2rem; }
+    .stat-label { font-size: 0.68rem; }
 }

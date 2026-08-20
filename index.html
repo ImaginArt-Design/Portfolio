@@ -41,25 +41,25 @@
 
     <main>
         <!-- ═══ HERO SECTION ═══ -->
-        <section id="hero" class="hero-section" style="min-height: 90vh; display: flex; align-items: center; justify-content: center; text-align: center; padding-top: 100px;">
-            <div class="hero-content text-center" style="max-width: 950px; padding: 0 20px;">
-                <!-- Logo Hero identique à la navbar mais plus grand -->
-                <div class="hero-logo-box fade-in" style="display: flex; align-items: center; justify-content: center; gap: 18px; margin-bottom: 24px;">
-                    <img src="img/logo_icon.svg" alt="Imagin'Art Icon" style="height: 110px; width: auto; filter: drop-shadow(0 0 24px rgba(166,135,99,0.55));">
-                    <img src="img/logo_text.svg" alt="Imagin'Art" style="height: 54px; width: auto; filter: drop-shadow(0 0 12px rgba(166,135,99,0.3));">
+        <section id="hero" class="hero-section">
+            <div class="hero-content text-center">
+                <!-- Logo Hero avec classes réactives -->
+                <div class="hero-logo-box fade-in">
+                    <img src="img/logo_icon.svg" alt="Imagin'Art Icon" class="hero-logo-icon">
+                    <img src="img/logo_text.svg" alt="Imagin'Art" class="hero-logo-text">
                 </div>
 
-                <!-- Nom & Titre agrandis -->
-                <h2 class="fade-in-delay" style="font-size: clamp(1.8rem, 3.8vw, 2.8rem); margin-bottom: 25px; color: var(--brown); font-weight: 300;">
-                    par <span class="signature-font" style="font-size: 1.15em; font-weight: 700; color: var(--beige);">Laabidi Abdelghani</span>
+                <!-- Nom & Titre -->
+                <h2 class="hero-subtitle-name fade-in-delay">
+                    par <span class="signature-font">Laabidi Abdelghani</span>
                 </h2>
 
                 <!-- Effet Dactylo / Typewriter -->
-                <p class="fade-in-delay-2" style="font-size: clamp(1.3rem, 2.6vw, 1.85rem); margin-bottom: 40px; color: var(--cream); font-weight: 400;">
-                    <span data-i18n="heroDescStart">Donner vie aux idées : </span>&nbsp;<span class="typewriter" id="typewriter" style="color: var(--beige); font-weight: 700;"></span><span class="typewriter-cursor">|</span>
+                <p class="hero-typewriter-p fade-in-delay-2">
+                    <span data-i18n="heroDescStart">Conception sur mesure pour </span>&nbsp;<span class="typewriter" id="typewriter"></span><span class="typewriter-cursor">|</span>
                 </p>
 
-                <a href="#projects" class="btn primary-btn fade-in-delay-3" data-i18n="heroBtn" style="font-size: 1.1rem; padding: 16px 40px;">Découvrir mes travaux</a>
+                <a href="#projects" class="btn primary-btn fade-in-delay-3" data-i18n="heroBtn">Découvrir mes travaux</a>
             </div>
             <div class="scroll-indicator">↓</div>
         </section>
