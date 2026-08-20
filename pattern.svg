@@ -403,18 +403,9 @@
         fill: url(#linear-gradient41);
       }
     </style>
-    <linearGradient id="linear-gradient" x1="-133.4" y1="2.5" x2="1324" y2="2.5" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#4e391c"/>
-      <stop offset=".2" stop-color="#b58c5c"/>
-      <stop offset=".3" stop-color="#fac988"/>
-      <stop offset=".4" stop-color="#f7daa3"/>
-      <stop offset=".5" stop-color="#fee0b3"/>
-      <stop offset=".5" stop-color="#fee0b3"/>
-      <stop offset=".5" stop-color="#fee0b3"/>
-      <stop offset=".6" stop-color="#f7daa3"/>
-      <stop offset=".7" stop-color="#fac988"/>
-      <stop offset=".8" stop-color="#b58c5c"/>
-      <stop offset=".9" stop-color="#4e391c"/>
+    <linearGradient id="linear-gradient" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#d7c9ae" stop-opacity="0.8"/>
+      <stop offset="1" stop-color="#d7c9ae" stop-opacity="0.8"/>
     </linearGradient>
     <linearGradient id="linear-gradient1" x1="-133.4" y1="65.1" x2="1324" y2="65.1" xlink:href="#linear-gradient"/>
     <linearGradient id="linear-gradient2" x1="-133.4" y1="185.1" x2="1324" y2="185.1" xlink:href="#linear-gradient"/>
