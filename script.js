@@ -196,14 +196,12 @@ document.addEventListener('DOMContentLoaded', () => {
                     <div class="project-info">
                         <h3 class="project-title" style="font-size: 1.2rem; margin-bottom: 6px; color: var(--beige); font-weight: 700;">${project.title}</h3>
                         <span class="project-category" style="font-size: 0.88rem; color: var(--brown); font-weight: 600;">${project.category}</span>
-                        ${project.link ? `<div style="margin-top:14px;"><a href="${project.link}" style="font-size:0.82rem; color:var(--brown); border:1px solid var(--brown); padding:6px 16px; border-radius:20px; text-decoration:none; transition:all 0.2s;" onmouseover="this.style.background='var(--brown)';this.style.color='#1a1810'" onmouseout="this.style.background='';this.style.color='var(--brown)'">Voir la page →</a></div>` : ''}
+                        ${project.link ? `<div style="margin-top:14px;"><a href="${project.link}" target="_blank" rel="noopener" style="font-size:0.82rem; color:var(--brown); border:1px solid var(--brown); padding:6px 16px; border-radius:20px; text-decoration:none; display:inline-block; transition:all 0.2s;" onmouseover="this.style.background='var(--brown)';this.style.color='#1a1810'" onmouseout="this.style.background='';this.style.color='var(--brown)'">Voir la page →</a></div>` : ''}
                     </div>
                 `;
                 if (project.link) {
                     item.addEventListener('click', (e) => {
-                        if (!e.target.closest('a')) {
-                            window.location.href = project.link;
-                        }
+                        window.open(project.link, '_blank');
                     });
                 }
                 projectsGrid.appendChild(item);
