@@ -102,7 +102,7 @@ const projects = [
         title: "Imagin'Art Suite V4.0",
         category: "Extension Illustrator — Automatisation & Prépresse",
         image: "img/logo_2.0.svg",
-        link: "../Imagin_Suite_UXP/website/index.html"
+        link: "https://imaginart-design.github.io/ImaginArt-Suite/"
     }
 ];
 
