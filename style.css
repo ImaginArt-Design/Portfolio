@@ -337,6 +337,16 @@ html[lang="ar"] .lang-switcher {
     margin-bottom: 40px;
     color: var(--cream);
     font-weight: 400;
+    min-height: 1.5em;
+}
+
+.typewriter-prefix {
+    display: inline;
+}
+
+.typewriter-wrap {
+    display: inline-block;
+    white-space: nowrap;
 }
 
 .scroll-indicator {
@@ -884,8 +894,28 @@ html[lang="ar"] .marquee-content {
     }
 
     .hero-typewriter-p {
-        font-size: 1rem;
+        font-size: 1.05rem;
         margin-bottom: 28px;
+        min-height: 3.2em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 4px;
+        line-height: 1.35;
+    }
+
+    .typewriter-prefix {
+        display: block;
+        opacity: 0.9;
+    }
+
+    .typewriter-wrap {
+        display: inline-block;
+        white-space: nowrap;
+        min-height: 1.35em;
+        color: var(--beige);
+        font-weight: 600;
     }
 
     .btn {
