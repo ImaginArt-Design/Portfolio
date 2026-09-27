@@ -461,10 +461,10 @@ html[lang="ar"] .signature-font {
 /* Skills Grid */
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 25px;
+    grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+    gap: 24px;
     justify-content: center;
-    max-width: 900px;
+    max-width: 920px;
     margin: 0 auto;
 }
 
@@ -472,33 +472,59 @@ html[lang="ar"] .signature-font {
     background: var(--glass-bg);
     border: 1px solid var(--glass-border);
     border-radius: 20px;
-    padding: 30px 20px;
+    padding: 26px 18px;
     text-align: center;
-    transition: all 0.3s ease;
+    transition: all 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 15px;
+    gap: 12px;
 }
 
 .skill-item:hover {
-    background: rgba(166, 135, 99, 0.1);
-    transform: translateY(-10px);
+    background: rgba(166, 135, 99, 0.12);
+    transform: translateY(-8px);
     border-color: var(--beige);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35);
 }
 
 .skill-icon {
-    font-size: 2.2rem;
-    color: var(--beige);
-    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+}
+
+.software-logo {
+    width: 54px;
+    height: 54px;
+    object-fit: contain;
+    transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1), filter 0.35s ease;
+    filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.35));
+}
+
+.skill-item:hover .software-logo {
+    transform: scale(1.12);
+    filter: drop-shadow(0 6px 16px rgba(166, 135, 99, 0.45));
 }
 
 .skill-name {
-    font-weight: 400;
-    font-size: 1rem;
+    font-weight: 600;
+    font-size: 0.98rem;
     color: var(--cream);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+}
+
+.skill-sub {
+    font-size: 0.78rem;
+    color: var(--brown);
+    font-weight: 500;
+    letter-spacing: 0.3px;
 }
 
 .ai-mention {

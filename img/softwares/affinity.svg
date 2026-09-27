@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240">
+  <defs>
+    <linearGradient id="aff-border" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00D2FF"/>
+      <stop offset="100%" stop-color="#0055FF"/>
+    </linearGradient>
+    <linearGradient id="aff-facet1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00D2FF"/>
+      <stop offset="100%" stop-color="#0066FF"/>
+    </linearGradient>
+    <linearGradient id="aff-facet2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4EEDD2"/>
+      <stop offset="100%" stop-color="#00B4D8"/>
+    </linearGradient>
+    <linearGradient id="aff-facet3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0088FF"/>
+      <stop offset="100%" stop-color="#0044CC"/>
+    </linearGradient>
+    <linearGradient id="aff-facet4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#55E0FF"/>
+      <stop offset="100%" stop-color="#0099FF"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background Tile -->
+  <rect x="3" y="3" width="234" height="234" rx="46" ry="46" fill="#08182B" stroke="url(#aff-border)" stroke-width="6"/>
+
+  <!-- Affinity Designer Facets -->
+  <g transform="translate(36, 36) scale(7)">
+    <!-- Left Wing -->
+    <path fill="url(#aff-facet1)" d="M1.758 21.305c0 .517.42.937.938.937h8.226l-4.299-7.445 7.528-13.039h-3.482L1.758 17.192v4.113Z"/>
+    <!-- Center Triangle Core -->
+    <path fill="url(#aff-facet2)" d="m13.176 14.439 -2.712-4.698 -1.761 3.051a1.098 1.098 0 0 0 .952 1.647h3.521Z"/>
+    <!-- Bottom Right Base -->
+    <path fill="url(#aff-facet3)" d="m22.242 21.312 v-6.075H7.799l4.044 7.005h9.462a.937.937 0 0 0 .937-.93Z"/>
+    <!-- Top Right Wing -->
+    <path fill="url(#aff-facet4)" d="m21.305 1.758 h-6.232l-4.148 7.185 3.173 5.496h8.144V2.688a.937.937 0 0 0-.937-.93Z"/>
+  </g>
+</svg>

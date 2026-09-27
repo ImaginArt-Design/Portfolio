@@ -88,12 +88,14 @@ const translations = {
 
 // 2. Logiciels
 const softwares = [
-    { name: "Illustrator", icon: "Ai" },
-    { name: "Photoshop", icon: "Ps" },
-    { name: "InDesign", icon: "Id" },
-    { name: "CorelDraw", icon: "Cd" },
-    { name: "Affinity Designer", icon: "Af" },
-    { name: "CEP & Scripting", icon: "Js" }
+    { name: "Illustrator", icon: "img/softwares/illustrator.svg", alt: "Adobe Illustrator" },
+    { name: "Photoshop", icon: "img/softwares/photoshop.svg", alt: "Adobe Photoshop" },
+    { name: "InDesign", icon: "img/softwares/indesign.svg", alt: "Adobe InDesign" },
+    { name: "CorelDraw", icon: "img/softwares/coreldraw.svg", alt: "CorelDRAW" },
+    { name: "Affinity Designer", icon: "img/softwares/affinity.svg", alt: "Affinity Designer" },
+    { name: "Inkscape", icon: "img/softwares/inkscape.svg", alt: "Inkscape" },
+    { name: "Kelk", icon: "img/softwares/kelk.svg", alt: "Kelk Calligraphie", subtitle: { fr: "Calligraphie", en: "Calligraphy" } },
+    { name: "CEP & Scripting", icon: "img/softwares/javascript.svg", alt: "CEP & Scripting" }
 ];
 
 // 3. Projects
@@ -147,6 +149,9 @@ document.addEventListener('DOMContentLoaded', () => {
             emptyTextEl.innerText = translations[lang].projectsEmpty;
         }
 
+        // Re-render skills on lang change
+        renderSkills(lang);
+
         // Restart typewriter on lang change
         wordIndex = 0;
         charIndex = 0;
@@ -160,19 +165,27 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Populate Skills Grid
-    if (skillsGrid) {
+    // Populate Skills Grid with official software logos
+    function renderSkills(lang) {
+        if (!skillsGrid) return;
         skillsGrid.innerHTML = '';
         softwares.forEach(skill => {
             const item = document.createElement('div');
             item.className = 'skill-item glass-card';
+            const subHtml = skill.subtitle ? `<span class="skill-sub">${skill.subtitle[lang] || skill.subtitle.fr}</span>` : '';
             item.innerHTML = `
-                <div class="skill-icon">${skill.icon}</div>
-                <div class="skill-name">${skill.name}</div>
+                <div class="skill-icon">
+                    <img src="${skill.icon}" alt="${skill.alt || skill.name}" class="software-logo" loading="lazy">
+                </div>
+                <div class="skill-name">
+                    <span>${skill.name}</span>
+                    ${subHtml}
+                </div>
             `;
             skillsGrid.appendChild(item);
         });
     }
+    renderSkills(currentLang);
 
     // Populate Projects Grid
     if (projectsGrid) {
