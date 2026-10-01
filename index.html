@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Imagin'Art | Laabidi Abdelghani</title>
-    <meta name="description" content="Portfolio de Laabidi Abdelghani — graphiste et créatif avec 8 ans d'expérience en design, imprimerie, découpe laser/CNC et outils Illustrator.">
+    <meta name="description" content="Portfolio de Laabidi Abdelghani — graphiste, concepteur d'atelier &amp; développeur d'outils (Adobe Illustrator, print, packaging, enseignes 3D, découpe laser/CNC).">
     <link rel="icon" type="image/svg+xml" href="img/logo_icon.svg">
-    <link rel="stylesheet" href="style.css?v=8">
+    <link rel="stylesheet" href="style.css?v=19">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -17,14 +17,14 @@
 
     <nav id="navbar">
         <div class="nav-container">
-            <div class="logo" style="display: flex; align-items: center; gap: 12px;">
-                <img src="img/logo_icon.svg" alt="Imagin'Art Icon" style="height: 52px; width: auto; filter: drop-shadow(0 0 6px rgba(166,135,99,0.4));">
-                <img src="img/logo_text.svg" alt="Imagin'Art" style="height: 26px; width: auto;">
+            <div class="logo">
+                <a href="#hero" style="display: flex; align-items: center; text-decoration: none;">
+                    <img src="img/logo_icon.svg" alt="Imagin'Art Icon" style="height: 48px; width: auto; filter: drop-shadow(0 0 8px rgba(166,135,99,0.35));">
+                </a>
             </div>
             <ul class="nav-links">
                 <li><a href="#hero" data-i18n="navHome">Accueil</a></li>
                 <li><a href="#about" data-i18n="navAbout">À Propos</a></li>
-                <li><a href="#story" data-i18n="navStory">Philosophie</a></li>
                 <li><a href="#skills" data-i18n="navSkills">Expertise</a></li>
                 <li><a href="#projects" data-i18n="navProjects">Réalisations</a></li>
                 <li><a href="#contact" data-i18n="navContact">Contact</a></li>
@@ -43,127 +43,169 @@
         <!-- ═══ HERO SECTION ═══ -->
         <section id="hero" class="hero-section">
             <div class="hero-content text-center">
-                <!-- Logo Hero avec classes réactives -->
-                <div class="hero-logo-box fade-in">
-                    <img src="img/logo_icon.svg" alt="Imagin'Art Icon" class="hero-logo-icon">
-                    <img src="img/logo_text.svg" alt="Imagin'Art" class="hero-logo-text">
+
+                <!-- Bloc Logo de Marque Homogène : Emblème + Texte IMAGIN'ART -->
+                <div class="hero-brand-block fade-in">
+                    <div class="hero-brand-aura" aria-hidden="true"></div>
+                    <img src="img/logo_icon.svg" alt="Imagin'Art Emblem" class="hero-brand-emblem">
+                    <img src="img/logo_text.svg" alt="Imagin'Art" class="hero-brand-text">
                 </div>
 
-                <!-- Nom & Titre -->
-                <h2 class="hero-subtitle-name fade-in-delay">
-                    par <span class="signature-font">Laabidi Abdelghani</span>
-                </h2>
+                <!-- Nom agrandi au milieu -->
+                <h1 class="hero-center-name fade-in-delay">
+                    <span class="hero-firstname">Laabidi</span> <span class="hero-lastname">Abdelghani</span>
+                </h1>
 
-                <!-- Effet Dactylo / Typewriter -->
-                <p class="hero-typewriter-p fade-in-delay-2">
-                    <span class="typewriter-prefix" data-i18n="heroDescStart">Conception sur mesure pour </span><span class="typewriter-wrap"><span class="typewriter" id="typewriter"></span><span class="typewriter-cursor">|</span></span>
+                <!-- Tag line sobre -->
+                <p class="hero-tag fade-in-delay" data-i18n="heroTag">Graphiste &nbsp;·&nbsp; Concepteur d'Atelier &nbsp;·&nbsp; Développeur d'Extensions Illustrator</p>
+
+                <!-- Séparateur doré fin -->
+                <div class="hero-divider fade-in-delay-2" aria-hidden="true"></div>
+
+                <!-- Bouton Explorer mes réalisations juste après le nom -->
+                <div class="hero-cta-box fade-in-delay-2">
+                    <a href="#projects" class="btn primary-btn hero-main-btn" data-i18n="heroBtn">Explorer mes réalisations</a>
+                </div>
+
+                <!-- Slide-up cinétique -->
+                <p class="hero-typewriter-p fade-in-delay-3">
+                    <span class="typewriter-prefix" data-i18n="heroDescStart">Je conçois : </span>
+                    <span class="slide-words-wrap" id="slideWordsWrap">
+                        <span class="slide-word" id="slideWord"></span>
+                    </span>
                 </p>
 
-                <a href="#projects" class="btn primary-btn fade-in-delay-3" data-i18n="heroBtn">Découvrir mes travaux</a>
+                <!-- Chips stats -->
+                <div class="hero-chips fade-in-delay-3">
+                    <span class="hero-chip"><span class="chip-num">8+</span> <span class="chip-label" data-i18n="stat1">ans d'expérience</span></span>
+                    <span class="hero-chip-sep" aria-hidden="true">·</span>
+                    <span class="hero-chip"><span class="chip-num">100+</span> <span class="chip-label" data-i18n="stat2">projets réalisés</span></span>
+                    <span class="hero-chip-sep" aria-hidden="true">·</span>
+                    <span class="hero-chip"><span class="chip-num">16</span> <span class="chip-label" data-i18n="stat3">outils développés</span></span>
+                </div>
+
+                <!-- ═══ BANDE DÉROULANTE EXPERTISES (remontée dans le Hero) ═══ -->
+                <div class="marquee-container fade-in-delay-3">
+                    <div class="marquee-content">
+                        <!-- Groupe 1 -->
+                        <span class="expertise-tag">PLEXIGLAS &amp; FOREX</span>
+                        <span class="expertise-sep">✦</span>
+                        <span class="expertise-tag">DÉCOUPE LASER &amp; CNC</span>
+                        <span class="expertise-sep">✦</span>
+                        <span class="expertise-tag">ENSEIGNES 3D RÉTROÉCLAIRÉES</span>
+                        <span class="expertise-sep">✦</span>
+                        <span class="expertise-tag">SCRIPTS JSX AUTOMATION</span>
+                        <span class="expertise-sep">✦</span>
+                        <span class="expertise-tag">PACKAGING SUR MESURE</span>
+                        <span class="expertise-sep">✦</span>
+                        <span class="expertise-tag">LOGO &amp; BRANDING</span>
+                        <span class="expertise-sep">✦</span>
+                        <span class="expertise-tag">IDENTITÉ VISUELLE</span>
+                        <span class="expertise-sep">✦</span>
+                        <span class="expertise-tag">CALLIGRAPHIE ARABE</span>
+                        <span class="expertise-sep">✦</span>
+                        <!-- Groupe 2 (dupliqué pour boucle infinie fluide) -->
+                        <span class="expertise-tag">PLEXIGLAS &amp; FOREX</span>
+                        <span class="expertise-sep">✦</span>
+                        <span class="expertise-tag">DÉCOUPE LASER &amp; CNC</span>
+                        <span class="expertise-sep">✦</span>
+                        <span class="expertise-tag">ENSEIGNES 3D RÉTROÉCLAIRÉES</span>
+                        <span class="expertise-sep">✦</span>
+                        <span class="expertise-tag">SCRIPTS JSX AUTOMATION</span>
+                        <span class="expertise-sep">✦</span>
+                        <span class="expertise-tag">PACKAGING SUR MESURE</span>
+                        <span class="expertise-sep">✦</span>
+                        <span class="expertise-tag">LOGO &amp; BRANDING</span>
+                        <span class="expertise-sep">✦</span>
+                        <span class="expertise-tag">IDENTITÉ VISUELLE</span>
+                        <span class="expertise-sep">✦</span>
+                        <span class="expertise-tag">CALLIGRAPHIE ARABE</span>
+                        <span class="expertise-sep">✦</span>
+                    </div>
+                </div>
+
             </div>
             <div class="scroll-indicator">↓</div>
         </section>
 
-        <!-- ═══ QUOTES MARQUEE (Bande de citations qui déroule) ═══ -->
-        <div class="marquee-container fade-in-delay-3">
-            <div class="marquee-content">
-                <!-- Groupe 1 -->
-                <span class="quote">"Design is the silent ambassador of your brand." <span class="author">— Paul Rand</span></span>
-                <span class="quote-separator">✦</span>
-                <span class="quote">"Styles come and go. Good design is a language, not a style." <span class="author">— Massimo Vignelli</span></span>
-                <span class="quote-separator">✦</span>
-                <span class="quote">"Simplicity is the ultimate sophistication." <span class="author">— Leonardo da Vinci</span></span>
-                <span class="quote-separator">✦</span>
-                <span class="quote">"Design is not just what it looks like and feels like. Design is how it works." <span class="author">— Steve Jobs</span></span>
-                <span class="quote-separator">✦</span>
-                <!-- Groupe 2 (Dupliqué pour boucle infinie fluide) -->
-                <span class="quote">"Design is the silent ambassador of your brand." <span class="author">— Paul Rand</span></span>
-                <span class="quote-separator">✦</span>
-                <span class="quote">"Styles come and go. Good design is a language, not a style." <span class="author">— Massimo Vignelli</span></span>
-                <span class="quote-separator">✦</span>
-                <span class="quote">"Simplicity is the ultimate sophistication." <span class="author">— Leonardo da Vinci</span></span>
-                <span class="quote-separator">✦</span>
-                <span class="quote">"Design is not just what it looks like and feels like. Design is how it works." <span class="author">— Steve Jobs</span></span>
-                <span class="quote-separator">✦</span>
-            </div>
-        </div>
-
-        <!-- ═══ ABOUT ═══ -->
+        <!-- ═══ SECTION À PROPOS & SAVOIR-FAIRE ═══ -->
         <section id="about" class="about-section">
             <div class="section-container">
-                <h2 class="section-title" data-i18n="aboutTitle">À Propos de Moi</h2>
-                <div class="about-grid">
-                    <div class="about-text glass-card">
-                        <p data-i18n="aboutText">Bonjour ! Je suis Laabidi Abdelghani, graphiste et créatif avec plus de 8 ans d'expérience dans le design graphique.</p>
-                        <p data-i18n="aboutText2" style="margin-top:1rem;">Mon univers ne s'arrête pas à l'écran. Depuis quelques années, je travaille également dans l'imprimerie, ce qui m'a permis de mieux comprendre ce qui se passe entre une idée et sa réalisation. Je conçois donc mes projets en pensant aussi à leur rendu final : papier, impression, découpe, enseigne, plexiglas, PVC ou autres supports.</p>
-                        <p data-i18n="aboutText3" style="margin-top:1rem;">J'aime particulièrement transformer une idée en quelque chose de concret et de fabriqué. En plus du design graphique, je réalise des créations et petites pièces en plexiglas ou PVC, et je prépare les fichiers nécessaires à la découpe laser ou CNC pour des projets comme les panneaux 3D, l'habillage d'enseignes, les présentoirs ou certains éléments de décoration.</p>
-                        <p data-i18n="aboutText4" style="margin-top:1rem;">Je développe également mes propres petits outils et extensions pour Illustrator afin d'automatiser certaines tâches et de rendre le travail quotidien plus rapide et plus efficace.</p>
-                    </div>
-                    <div class="core-disciplines glass-card">
-                        <h3 data-i18n="coreDisciplines">Ce que je fais</h3>
+                <h2 class="section-title" data-i18n="aboutTitle">À Propos &amp; Savoir-Faire</h2>
+
+                <!-- Biographie humaine -->
+                <div class="about-bio glass-card">
+                    <p data-i18n="aboutText">Graphiste de formation avec plus de 8 ans d’expérience, mon parcours s’est enrichi ces dernières années au cœur même d'imprimeries et d'ateliers de fabrication.</p>
+                    <p data-i18n="aboutText2" style="margin-top:1rem;">Ce passage sur le terrain a tout changé : en exploitant des presses numériques (Xerox...), en jaugeant les supports et en tirant des centaines d'éditions (papeterie, cartes de visite, affiches, menus, packaging), j’ai appris comment un fichier réagit concrètement une fois sorti de l'écran.</p>
+                    <p data-i18n="aboutText3" style="margin-top:1rem;">De la signalétique 3D (panneaux, plexiglas, forex) à la découpe et gravure laser (CO2, fibre, fabrication de cachets), je ne conçois pas de simples visuels abstraits : je prépare et optimise des tracés techniques rigoureux, prêts pour la découpe et l'usinage au millimètre près.</p>
+                    <p data-i18n="aboutText4" style="margin-top:1rem;">C'est cette double culture entre exigence graphique et contraintes de production qui m'a conduit à concevoir et développer mes propres extensions d'automatisation sur Adobe Illustrator (Imagin'Art Suite).</p>
+                </div>
+
+                <!-- Bloc unique de compétences -->
+                <div class="scope-card glass-card">
+                    <h3 class="scope-card-title" data-i18n="scopeTitle">Ce que je conçois</h3>
+                    <div class="scope-grid">
                         <ul class="disciplines-list">
                             <li class="discipline-item">
                                 <span class="discipline-icon">✦</span>
-                                <span class="discipline-label" data-i18n="skill1">Identité visuelle & création de logos</span>
+                                <span class="discipline-label" data-i18n="skill1">Identité visuelle &amp; logotypes sur mesure</span>
                             </li>
                             <li class="discipline-item">
                                 <span class="discipline-icon">✦</span>
-                                <span class="discipline-label" data-i18n="skill2">Conception graphique pour l'impression</span>
+                                <span class="discipline-label" data-i18n="skill2">Direction artistique print &amp; édition</span>
                             </li>
                             <li class="discipline-item">
                                 <span class="discipline-icon">✦</span>
-                                <span class="discipline-label" data-i18n="skill3">Mise en page & supports de communication</span>
+                                <span class="discipline-label" data-i18n="skill3">Packaging &amp; gabarits techniques de découpe</span>
                             </li>
                             <li class="discipline-item">
                                 <span class="discipline-icon">✦</span>
-                                <span class="discipline-label" data-i18n="skill4">Préparation de fichiers pour découpe laser & CNC</span>
+                                <span class="discipline-label" data-i18n="skill6">Calligraphie arabe moderne (Kelk)</span>
+                            </li>
+                        </ul>
+                        <ul class="disciplines-list">
+                            <li class="discipline-item">
+                                <span class="discipline-icon">✦</span>
+                                <span class="discipline-label" data-i18n="skill4">Enseignes lumineuses &amp; lettrages 3D</span>
                             </li>
                             <li class="discipline-item">
                                 <span class="discipline-icon">✦</span>
-                                <span class="discipline-label" data-i18n="skill5">Conception de panneaux 3D & habillage d'enseignes</span>
+                                <span class="discipline-label" data-i18n="skill5">Tracés techniques pour découpe laser &amp; CNC</span>
                             </li>
                             <li class="discipline-item">
                                 <span class="discipline-icon">✦</span>
-                                <span class="discipline-label" data-i18n="skill6">Création de petits objets, présentoirs & éléments en PVC / plexiglas</span>
+                                <span class="discipline-label" data-i18n="skill8">Plexiglas, forex &amp; pièces techniques</span>
                             </li>
                             <li class="discipline-item">
                                 <span class="discipline-icon">✦</span>
-                                <span class="discipline-label" data-i18n="skill7">Conception graphique de packaging & gabarits de découpe</span>
-                            </li>
-                            <li class="discipline-item">
-                                <span class="discipline-icon">✦</span>
-                                <span class="discipline-label" data-i18n="skill8">Automatisation & outils pour Adobe Illustrator</span>
+                                <span class="discipline-label" data-i18n="skill7">Extensions &amp; scripts pour Adobe Illustrator</span>
                             </li>
                         </ul>
                     </div>
                 </div>
-            </div>
-        </section>
 
-        <section id="story" class="story-section">
-            <div class="section-container text-center">
-                <h2 class="section-title" data-i18n="storyTitle">Philosophie d'Atelier</h2>
-                <div class="story-content glass-card">
-                    <p data-i18n="storyText"><strong>Imagin'Art</strong> repose sur une règle simple : un design réussi ne s'arrête pas à une belle maquette sur écran, il doit être parfaitement imprimable et usinable dans le monde réel. En associant rigueur graphique et savoir-faire d'atelier, chaque tracé, fond perdu ou séparation de couleur est pensé pour un résultat physique impeccable, sans mauvaise surprise.</p>
+                <!-- Philosophie condensée -->
+                <div class="manifeste-philo glass-card">
+                    <p data-i18n="storyText"><strong>Entre une belle image à l'écran et un produit réel sorti d'atelier, il y a la rigueur du tracé.</strong> Chez Imagin'Art, chaque projet est pensé dès la première esquisse avec la conscience de la matière : le comportement de l'encre, l'épaisseur du matériau, le passage du massicot ou la fraise de la machine. Cette double culture du design et de la fabrication garantit des réalisations esthétiques, durables et fidèles au millimètre.</p>
                 </div>
             </div>
         </section>
 
         <section id="skills" class="skills-section">
             <div class="section-container">
-                <h2 class="section-title text-center" data-i18n="skillsTitle">Logiciels & Outils</h2>
+                <h2 class="section-title text-center" data-i18n="skillsTitle">Logiciels &amp; Outils</h2>
                 <div class="skills-grid" id="skills-grid">
                     <!-- Populated by JS -->
                 </div>
                 <div class="ai-mention text-center">
-                    <p>✨ <i data-i18n="aiMention">Flux de travail optimisé par des scripts d'automatisation personnalisés.</i></p>
+                    <p><i data-i18n="aiMention">Flux de travail accéléré par mes propres outils d'ingénierie vectorielle.</i></p>
                 </div>
             </div>
         </section>
 
         <section id="projects" class="projects-section">
             <div class="section-container">
-                <h2 class="section-title text-center" data-i18n="projectsTitle">Réalisations & Projets</h2>
+                <h2 class="section-title text-center" data-i18n="projectsTitle">Réalisations &amp; Projets</h2>
                 <div class="projects-grid" id="projects-grid">
                     <!-- Populated by JS -->
                 </div>
@@ -202,6 +244,6 @@
         </div>
     </footer>
 
-    <script src="script.js?v=8"></script>
+    <script src="script.js?v=19"></script>
 </body>
 </html>

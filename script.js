@@ -3,39 +3,43 @@ const translations = {
     en: {
         navHome: "Home",
         navAbout: "About",
-        navStory: "Philosophy",
         navSkills: "Expertise",
         navProjects: "Work",
         navContact: "Contact",
         heroTitle: "Imagin'Art",
-        heroSubtitle: "by <span class='signature-font'>Laabidi Abdelghani</span>",
-        heroDescStart: "Custom design for ",
-        heroWords: ["brand identities.", "print projects.", "3D signs & panels.", "custom fabrication."],
-        heroBtn: "Explore Work",
-        stat1: "years of experience",
-        stat2: "Graphic Design",
-        stat3: "Print & Prepress",
-        stat4: "Cutting & Fabrication",
-        aboutTitle: "About Me",
-        aboutText: "Hello! I am Laabidi Abdelghani, graphic designer and creative with over 8 years of experience in graphic design.",
-        aboutText2: "My universe doesn't stop at the screen. For several years, I have also been working in the printing industry, which allowed me to better understand what happens between an idea and its realization. I design my projects with their final outcome in mind: paper, print, cutting, signage, acrylic, PVC, or other substrates.",
-        aboutText3: "I particularly like transforming an idea into something concrete and crafted. In addition to graphic design, I create objects and small pieces in acrylic or PVC, and prepare necessary files for laser or CNC cutting for projects like 3D panels, sign wrapping, display stands, or decorative elements.",
-        aboutText4: "I also develop my own tools and extensions for Illustrator to automate tasks and make daily work faster and more efficient.",
-        coreDisciplines: "What I Do",
-        skill1: "Visual identity & logo design",
-        skill2: "Graphic design for print",
-        skill3: "Layout & communication materials",
-        skill4: "Preparation of files for laser & CNC cutting",
-        skill5: "3D panels & sign wrapping design",
-        skill6: "Creation of small objects, displays & PVC / acrylic items",
-        skill7: "Packaging graphic design & cutting dielines",
-        skill8: "Automation & tools for Adobe Illustrator",
-        storyTitle: "Studio Philosophy",
-        storyText: "<strong>Imagin'Art</strong> is built on a simple rule: great design doesn't stop at a beautiful screen mockup, it must print and fabricate flawlessly in the real world. By merging graphic judgment with hands-on workshop experience, every vector, bleed, and color separation is crafted for a precise physical result — no surprises.",
+        heroTag: "Graphic Designer &nbsp;·&nbsp; Workshop Designer &nbsp;·&nbsp; Illustrator Extensions Developer",
+        heroRole: "Graphic Designer &bull; Workshop Designer &bull; Illustrator Extensions Developer",
+        heroDescStart: "I design: ",
+        heroWords: [
+            "timeless brand identities & logos.",
+            "print art direction & packaging.",
+            "complete publishing & editorial systems.",
+            "automation extensions for Illustrator."
+        ],
+        heroBtn: "Explore My Work",
+        stat1: "Years of experience",
+        stat2: "Projects completed",
+        stat3: "Automation tools developed",
+        aboutTitle: "About & Craft",
+        aboutText: "Graphic designer by trade with over 8 years of practice, my background was forged in the reality of print shops and fabrication workshops.",
+        aboutText2: "Working directly on production floors changed everything: operating digital presses (Xerox...), testing substrates, and printing hundreds of formats (stationery, business cards, posters, menus, packaging), I learned how a digital design truly behaves once translated into physical matter.",
+        aboutText3: "From 3D signage (panels, acrylic, PVC) to laser cutting and engraving (CO2, fiber, custom stamps), I don't just create visuals: I engineer production-ready vector files and dielines optimized for CNC milling and laser machines down to the millimeter.",
+        aboutText4: "This dual background in creative design and hands-on printing realities led me to develop my own workflow automation extensions for Adobe Illustrator (Imagin'Art Suite).",
+        scopeTitle: "What I Design",
+        skill1: "Custom brand identity & logos",
+        skill2: "Print art direction & publishing",
+        skill3: "Packaging & custom dielines",
+        skill4: "Illuminated signs & 3D relief lettering",
+        skill5: "Technical vector paths for laser & CNC",
+        skill6: "Modern Arabic calligraphy (Kelk)",
+        skill7: "Adobe Illustrator extensions & scripting",
+        skill8: "Acrylic, PVC & technical parts",
+        storyText: "<strong>Between a beautiful mockup on screen and a tangible finished piece, lies the precision of the vector path.</strong> At Imagin'Art, every project is conceived with deep respect for physical matter: ink behavior, material thickness, guillotine trim, or CNC router bit radius. This dual culture of design elegance and manufacturing rigor ensures projects that are visually striking, durable, and precise to the millimeter.",
         skillsTitle: "Software & Tools",
-        aiMention: "Workflows boosted by custom automation scripts.",
+        aiMention: "Workflows accelerated by custom vector engineering tools.",
         projectsTitle: "Projects & Work",
-        projectsEmpty: "No projects yet.",
+        projectsPlaceholder: "Gallery in progress",
+        projectsPlaceholderSub: "Flagship projects — print, fabrication, identities & tools — coming soon.",
         contactTitle: "Let's Talk About Your Project",
         contactNamePlaceholder: "Your Name",
         contactMessagePlaceholder: "Describe your project or production needs...",
@@ -45,39 +49,43 @@ const translations = {
     fr: {
         navHome: "Accueil",
         navAbout: "À Propos",
-        navStory: "Philosophie",
         navSkills: "Expertise",
         navProjects: "Réalisations",
         navContact: "Contact",
         heroTitle: "Imagin'Art",
-        heroSubtitle: "par <span class='signature-font'>Laabidi Abdelghani</span>",
-        heroDescStart: "Conception sur mesure pour ",
-        heroWords: ["vos identités visuelles.", "vos projets d'impression.", "vos enseignes 3D.", "vos pièces sur mesure."],
-        heroBtn: "Découvrir mes travaux",
-        stat1: "ans d'expérience",
-        stat2: "Design Graphique",
-        stat3: "Print & Imprimerie",
-        stat4: "Découpe & Fabrication",
-        aboutTitle: "À Propos de Moi",
-        aboutText: "Bonjour ! Je suis Laabidi Abdelghani, graphiste et créatif avec plus de 8 ans d'expérience dans le design graphique.",
-        aboutText2: "Mon univers ne s'arrête pas à l'écran. Depuis quelques années, je travaille également dans l'imprimerie, ce qui m'a permis de mieux comprendre ce qui se passe entre une idée et sa réalisation. Je conçois donc mes projets en pensant aussi à leur rendu final : papier, impression, découpe, enseigne, plexiglas, PVC ou autres supports.",
-        aboutText3: "J'aime particulièrement transformer une idée en quelque chose de concret et de fabriqué. En plus du design graphique, je réalise des créations et petites pièces en plexiglas ou PVC, et je prépare les fichiers nécessaires à la découpe laser ou CNC pour des projets comme les panneaux 3D, l'habillage d'enseignes, les présentoirs ou certains éléments de décoration.",
-        aboutText4: "Je développe également mes propres petits outils et extensions pour Illustrator afin d'automatiser certaines tâches et de rendre le travail quotidien plus rapide et plus efficace.",
-        coreDisciplines: "Ce que je fais",
-        skill1: "Identité visuelle & création de logos",
-        skill2: "Conception graphique pour l'impression",
-        skill3: "Mise en page & supports de communication",
-        skill4: "Préparation de fichiers pour découpe laser & CNC",
-        skill5: "Conception de panneaux 3D & habillage d'enseignes",
-        skill6: "Création de petits objets, présentoirs & éléments en PVC / plexiglas",
-        skill7: "Conception graphique de packaging & gabarits de découpe",
-        skill8: "Automatisation & outils pour Adobe Illustrator",
-        storyTitle: "Philosophie d'Atelier",
-        storyText: "<strong>Imagin'Art</strong> repose sur une règle simple : un design réussi ne s'arrête pas à une belle maquette sur écran, il doit être parfaitement imprimable et usinable dans le monde réel. En associant rigueur graphique et savoir-faire d'atelier, chaque tracé, fond perdu ou séparation de couleur est pensé pour un résultat physique impeccable, sans mauvaise surprise.",
+        heroTag: "Graphiste &nbsp;·&nbsp; Concepteur d'Atelier &nbsp;·&nbsp; Développeur d'Extensions Illustrator",
+        heroRole: "Graphiste &bull; Concepteur d'Atelier &bull; Développeur d'Extensions Illustrator",
+        heroDescStart: "Je conçois : ",
+        heroWords: [
+            "des identités visuelles durables.",
+            "des systèmes de marque complets.",
+            "des packagings prêts à l'impression.",
+            "des extensions pour Adobe Illustrator."
+        ],
+        heroBtn: "Explorer mes réalisations",
+        stat1: "Années d'expérience",
+        stat2: "Projets réalisés",
+        stat3: "Outils d'automatisation développés",
+        aboutTitle: "À Propos & Savoir-Faire",
+        aboutText: "Graphiste de formation avec plus de 8 ans d’expérience, mon parcours s’est enrichi ces dernières années au cœur même d'imprimeries et d'ateliers de fabrication.",
+        aboutText2: "Ce passage sur le terrain a tout changé : en exploitant des presses numériques (Xerox...), en jaugeant les supports et en tirant des centaines d'éditions (papeterie, cartes de visite, affiches, menus, packaging), j’ai appris comment un fichier réagit concrètement une fois sorti de l'écran.",
+        aboutText3: "De la signalétique 3D (panneaux, plexiglas, forex) à la découpe et gravure laser (CO2, fibre, fabrication de cachets), je ne conçois pas de simples visuels abstraits : je prépare et optimise des tracés techniques rigoureux, prêts pour la découpe et l'usinage au millimètre près.",
+        aboutText4: "C'est cette double culture entre exigence graphique et contraintes de production qui m'a conduit à concevoir et développer mes propres extensions d'automatisation sur Adobe Illustrator (Imagin'Art Suite).",
+        scopeTitle: "Ce que je conçois",
+        skill1: "Identité visuelle & logotypes sur mesure",
+        skill2: "Direction artistique print & édition",
+        skill3: "Packaging & gabarits techniques de découpe",
+        skill4: "Enseignes lumineuses & lettrages 3D",
+        skill5: "Tracés techniques pour découpe laser & CNC",
+        skill6: "Calligraphie arabe moderne (Kelk)",
+        skill7: "Extensions & scripts pour Adobe Illustrator",
+        skill8: "Plexiglas, forex & pièces techniques",
+        storyText: "<strong>Entre une belle image à l'écran et un produit réel sorti d'atelier, il y a la rigueur du tracé.</strong> Chez Imagin'Art, chaque projet est pensé dès la première esquisse avec la conscience de la matière : le comportement de l'encre, l'épaisseur du matériau, le passage du massicot ou la fraise de la machine. Cette double culture du design et de la fabrication garantit des réalisations esthétiques, durables et fidèles au millimètre.",
         skillsTitle: "Logiciels & Outils",
-        aiMention: "Flux de travail optimisé par des scripts d'automatisation personnalisés.",
+        aiMention: "Flux de travail accéléré par mes propres outils d'ingénierie vectorielle.",
         projectsTitle: "Réalisations & Projets",
-        projectsEmpty: "Aucun projet ajouté pour le moment.",
+        projectsPlaceholder: "Galerie en cours de constitution",
+        projectsPlaceholderSub: "Les réalisations phares — print, fabrication, identités & outils — arrivent bientôt.",
         contactTitle: "Discutons de votre projet",
         contactNamePlaceholder: "Votre Nom",
         contactMessagePlaceholder: "Décrivez votre projet, vos besoins en design ou en fabrication...",
@@ -95,7 +103,7 @@ const softwares = [
     { name: "Affinity Designer", icon: "img/softwares/affinity.svg", alt: "Affinity Designer" },
     { name: "Inkscape", icon: "img/softwares/inkscape.svg", alt: "Inkscape" },
     { name: "Kelk", icon: "img/softwares/kelk.svg", alt: "Kelk Calligraphie", subtitle: { fr: "Calligraphie", en: "Calligraphy" } },
-    { name: "CEP & Scripting", icon: "img/softwares/javascript.svg", alt: "CEP & Scripting" }
+    { name: "Dev & Scripting", icon: "img/softwares/javascript.svg", alt: "Dev & Scripting", subtitle: { fr: "JS / CEP / JSX", en: "JS / CEP / JSX" } }
 ];
 
 // 3. Projects
@@ -144,19 +152,15 @@ document.addEventListener('DOMContentLoaded', () => {
         const activeBtn = document.querySelector(`.lang-switcher button[data-lang="${lang}"]`);
         if (activeBtn) activeBtn.classList.add('active');
 
-        const emptyTextEl = document.querySelector('.empty-projects');
-        if (emptyTextEl && translations[lang]) {
-            emptyTextEl.innerText = translations[lang].projectsEmpty;
-        }
-
         // Re-render skills on lang change
         renderSkills(lang);
 
-        // Restart typewriter on lang change
-        wordIndex = 0;
-        charIndex = 0;
-        isDeleting = false;
-        if (typewriterEl) typewriterEl.textContent = '';
+        // Restart slide-up on lang change
+        slideIndex = 0;
+        startSlideUp(lang);
+
+        // Re-render projects on lang change
+        renderProjects(lang);
     }
 
     langButtons.forEach(btn => {
@@ -165,7 +169,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Populate Skills Grid with official software logos
+    // Populate Skills Grid
     function renderSkills(lang) {
         if (!skillsGrid) return;
         skillsGrid.innerHTML = '';
@@ -185,16 +189,13 @@ document.addEventListener('DOMContentLoaded', () => {
             skillsGrid.appendChild(item);
         });
     }
-    renderSkills(currentLang);
 
     // Populate Projects Grid
-    if (projectsGrid) {
+    function renderProjects(lang) {
+        if (!projectsGrid) return;
         projectsGrid.innerHTML = '';
         if (projects.length === 0) {
-            const emptyMsg = document.createElement('div');
-            emptyMsg.className = 'empty-projects';
-            emptyMsg.innerText = translations[currentLang].projectsEmpty;
-            projectsGrid.appendChild(emptyMsg);
+            renderProjectsPlaceholder(lang);
         } else {
             projects.forEach(project => {
                 const item = document.createElement('div');
@@ -209,54 +210,77 @@ document.addEventListener('DOMContentLoaded', () => {
                     <div class="project-info">
                         <h3 class="project-title" style="font-size: 1.2rem; margin-bottom: 6px; color: var(--beige); font-weight: 700;">${project.title}</h3>
                         <span class="project-category" style="font-size: 0.88rem; color: var(--brown); font-weight: 600;">${project.category}</span>
-                        ${project.link ? `<div style="margin-top:14px;"><a href="${project.link}" target="_blank" rel="noopener" style="font-size:0.82rem; color:var(--brown); border:1px solid var(--brown); padding:6px 16px; border-radius:20px; text-decoration:none; display:inline-block; transition:all 0.2s;" onmouseover="this.style.background='var(--brown)';this.style.color='#1a1810'" onmouseout="this.style.background='';this.style.color='var(--brown)'">Voir la page →</a></div>` : ''}
+                        ${project.link ? `<div style="margin-top:14px;"><a href="${project.link}" target="_blank" rel="noopener" style="font-size:0.82rem; color:var(--brown); border:1px solid var(--brown); padding:6px 16px; border-radius:20px; text-decoration:none; display:inline-block; transition:all 0.2s;" onmouseover="this.style.background='var(--brown)';this.style.color='#1a1810'" onmouseout="this.style.background='';this.style.color='var(--brown)'">Voir la page &rarr;</a></div>` : ''}
                     </div>
                 `;
                 if (project.link) {
-                    item.addEventListener('click', (e) => {
-                        window.open(project.link, '_blank');
-                    });
+                    item.addEventListener('click', () => { window.open(project.link, '_blank'); });
                 }
                 projectsGrid.appendChild(item);
             });
         }
     }
 
-    // Typewriter effect
-    const typewriterEl = document.getElementById('typewriter');
-    let wordIndex = 0;
-    let charIndex = 0;
-    let isDeleting = false;
-    let typeTimeout;
-
-    function typeEffect() {
-        const words = (translations[currentLang] && translations[currentLang].heroWords) || [];
-        if (!words.length || !typewriterEl) return;
-        const currentWord = words[wordIndex % words.length];
-
-        if (isDeleting) {
-            typewriterEl.textContent = currentWord.substring(0, charIndex - 1);
-            charIndex--;
-        } else {
-            typewriterEl.textContent = currentWord.substring(0, charIndex + 1);
-            charIndex++;
-        }
-
-        let typeSpeed = isDeleting ? 30 : 80;
-
-        if (!isDeleting && charIndex === currentWord.length) {
-            typeSpeed = 2200;
-            isDeleting = true;
-        } else if (isDeleting && charIndex === 0) {
-            isDeleting = false;
-            wordIndex++;
-            typeSpeed = 400;
-        }
-
-        clearTimeout(typeTimeout);
-        typeTimeout = setTimeout(typeEffect, typeSpeed);
+    function renderProjectsPlaceholder(lang) {
+        const t = translations[lang] || translations.fr;
+        const ph = document.createElement('div');
+        ph.className = 'projects-placeholder';
+        ph.innerHTML = `
+            <div class="projects-placeholder-inner">
+                <svg class="placeholder-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="4" y="14" width="24" height="18" rx="3" stroke="currentColor" stroke-width="1.5"/>
+                    <rect x="36" y="14" width="24" height="18" rx="3" stroke="currentColor" stroke-width="1.5"/>
+                    <rect x="4" y="38" width="24" height="12" rx="3" stroke="currentColor" stroke-width="1.5"/>
+                    <rect x="36" y="38" width="24" height="12" rx="3" stroke="currentColor" stroke-width="1.5"/>
+                    <line x1="14" y1="20" x2="18" y2="20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                    <line x1="46" y1="20" x2="50" y2="20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                    <line x1="14" y1="24" x2="22" y2="24" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                    <line x1="46" y1="24" x2="54" y2="24" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+                <h3 class="placeholder-title">${t.projectsPlaceholder}</h3>
+                <p class="placeholder-sub">${t.projectsPlaceholderSub}</p>
+            </div>
+        `;
+        projectsGrid.appendChild(ph);
     }
-    typeEffect();
+
+    // ═══ Slide-Up Words (CSS + JS orchestration) ═══
+    const slideWordEl = document.getElementById('slideWord');
+    let slideIndex = 0;
+    let slideTimeout = null;
+
+    function startSlideUp(lang) {
+        if (slideTimeout) clearTimeout(slideTimeout);
+        if (!slideWordEl) return;
+
+        const words = (translations[lang] && translations[lang].heroWords) || [];
+        if (!words.length) return;
+
+        function showNextWord() {
+            const word = words[slideIndex % words.length];
+            slideWordEl.classList.remove('slide-enter', 'slide-exit');
+
+            // Force reflow to restart animation
+            void slideWordEl.offsetWidth;
+
+            slideWordEl.textContent = word;
+            slideWordEl.classList.add('slide-enter');
+
+            // After display time, trigger exit
+            slideTimeout = setTimeout(() => {
+                slideWordEl.classList.remove('slide-enter');
+                slideWordEl.classList.add('slide-exit');
+
+                // After exit animation, load next word
+                slideTimeout = setTimeout(() => {
+                    slideIndex++;
+                    showNextWord();
+                }, 400);
+            }, 2800);
+        }
+
+        showNextWord();
+    }
 
     // Navbar scroll
     window.addEventListener('scroll', () => {
@@ -310,7 +334,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const btn = form.querySelector('.submit-btn');
             const originalText = btn.innerText;
-            btn.innerText = '✓ Envoyé';
+            btn.innerText = 'Envoyé';
             btn.style.backgroundColor = 'var(--beige)';
             btn.style.color = 'var(--dark)';
             setTimeout(() => {
@@ -342,6 +366,8 @@ document.addEventListener('DOMContentLoaded', () => {
             card.style.setProperty('--mouse-y', `${e.clientY - rect.top}px`);
         });
     });
+
+
 
     // Init
     setLanguage('fr');
