@@ -3,10 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Imagin'Art | Laabidi Abdelghani</title>
-    <meta name="description" content="Portfolio de Laabidi Abdelghani — graphiste, concepteur d'atelier &amp; développeur d'outils (Adobe Illustrator, print, packaging, enseignes 3D, découpe laser/CNC).">
+
+    <!-- ═══ SEO — Titre & Description ═══ -->
+    <title>Laabidi Abdelghani — Graphiste, Directeur Artistique & Développeur d'Extensions Illustrator | Imagin'Art</title>
+    <meta name="description" content="Portfolio de Laabidi Abdelghani — Graphiste & Directeur Artistique au Maroc. Identités visuelles, packaging, prépresse, signalétique 3D, découpe laser et développeur d'extensions Adobe Illustrator.">
+    <meta name="keywords" content="graphiste Maroc, directeur artistique Maroc, portfolio graphiste, packaging design Maroc, extension Illustrator, prépresse imprimerie, identité visuelle Maroc, découpe laser CNC Maroc">
+    <meta name="author" content="Laabidi Abdelghani — Imagin'Art">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://imaginart-design.github.io/Portfolio/">
+
+    <!-- ═══ Open Graph (Facebook, LinkedIn, WhatsApp) ═══ -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://imaginart-design.github.io/Portfolio/">
+    <meta property="og:title" content="Laabidi Abdelghani — Graphiste & Directeur Artistique | Imagin'Art">
+    <meta property="og:description" content="Portfolio : identités visuelles, packaging, prépresse, signalétique 3D et extensions Adobe Illustrator. 8+ ans d'expérience au Maroc.">
+    <meta property="og:image" content="https://imaginart-design.github.io/Portfolio/img/og-preview.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="fr_MA">
+    <meta property="og:site_name" content="Imagin'Art — Portfolio">
+
+    <!-- ═══ Twitter / X Card ═══ -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Laabidi Abdelghani — Graphiste & DA Maroc | Imagin'Art">
+    <meta name="twitter:description" content="Portfolio graphisme, packaging, prépresse et extensions Adobe Illustrator. Maroc.">
+    <meta name="twitter:image" content="https://imaginart-design.github.io/Portfolio/img/og-preview.jpg">
+
+    <!-- ═══ Schema.org JSON-LD : Person ═══ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Laabidi Abdelghani",
+      "jobTitle": "Graphiste, Directeur Artistique & Développeur d'Extensions Adobe Illustrator",
+      "url": "https://imaginart-design.github.io/Portfolio/",
+      "sameAs": [
+        "https://wa.me/212663280311",
+        "https://imaginart-design.github.io/ImaginArt-Suite/",
+        "https://imaginart-design.github.io/Wlidi/"
+      ],
+      "email": "laabidi.cloud@gmail.com",
+      "knowsAbout": [
+        "Adobe Illustrator",
+        "Identité visuelle",
+        "Direction artistique",
+        "Packaging design",
+        "Prépresse & imprimerie",
+        "Signalétique 3D",
+        "Tracés techniques découpe laser & CNC",
+        "Développement d'extensions Illustrator"
+      ],
+      "nationality": "MA"
+    }
+    </script>
+
     <link rel="icon" type="image/svg+xml" href="img/logo_icon.svg">
-    <link rel="stylesheet" href="style.css?v=19">
+    <link rel="stylesheet" href="style.css?v=22">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -15,26 +67,42 @@
     <!-- Background Pattern Fallback -->
     <div class="pattern-bg"></div>
 
-    <nav id="navbar">
+    <nav id="navbar" class="nav-studio">
         <div class="nav-container">
-            <div class="logo">
-                <a href="#hero" style="display: flex; align-items: center; text-decoration: none;">
-                    <img src="img/logo_icon.svg" alt="Imagin'Art Icon" style="height: 48px; width: auto; filter: drop-shadow(0 0 8px rgba(166,135,99,0.35));">
+            <!-- Gauche : Marque + Badge Disponibilité -->
+            <div class="nav-brand-group">
+                <a href="#hero" class="nav-logo-link" aria-label="Imagin'Art Accueil">
+                    <img src="img/logo_icon.svg" alt="Imagin'Art Icon" class="nav-logo-img">
+                    <img src="img/logo_text.svg" alt="Imagin'Art" class="nav-logo-text">
                 </a>
+                <span class="nav-status-badge">
+                    <span class="status-pulse"></span>
+                    <span class="status-label" data-i18n="navStatus">Disponible</span>
+                </span>
             </div>
+
+            <!-- Centre : Liens de navigation -->
             <ul class="nav-links">
                 <li><a href="#hero" data-i18n="navHome">Accueil</a></li>
                 <li><a href="#about" data-i18n="navAbout">À Propos</a></li>
                 <li><a href="#skills" data-i18n="navSkills">Expertise</a></li>
                 <li><a href="#projects" data-i18n="navProjects">Réalisations</a></li>
-                <li><a href="#contact" data-i18n="navContact">Contact</a></li>
-                <li class="lang-switcher">
+                <li class="mobile-cta-item"><a href="#contact" class="mobile-nav-cta-btn" data-i18n="navCta">Me contacter</a></li>
+            </ul>
+
+            <!-- Droite : Switcher Langue + Bouton CTA + Hamburger -->
+            <div class="nav-right-actions">
+                <div class="lang-switcher">
                     <button data-lang="en">EN</button>
                     <button data-lang="fr" class="active">FR</button>
-                </li>
-            </ul>
-            <div class="hamburger">
-                <span></span><span></span><span></span>
+                </div>
+                <a href="#contact" class="nav-cta-btn">
+                    <span data-i18n="navCta">Me contacter</span>
+                    <span class="cta-sparkle">✦</span>
+                </a>
+                <div class="hamburger" aria-label="Menu Mobile">
+                    <span></span><span></span><span></span>
+                </div>
             </div>
         </div>
     </nav>
@@ -230,6 +298,31 @@
         </section>
     </main>
 
+    <!-- ═══ LIGHTBOX / CAROUSEL MODAL ═══ -->
+    <div id="project-lightbox" class="lightbox-modal" aria-hidden="true">
+        <div class="lightbox-backdrop"></div>
+        <div class="lightbox-container">
+            <div class="lightbox-header">
+                <div class="lightbox-meta">
+                    <h3 class="lightbox-title" id="lightbox-title"></h3>
+                    <span class="lightbox-category" id="lightbox-category"></span>
+                </div>
+                <button class="lightbox-close" id="lightbox-close" aria-label="Fermer">&times;</button>
+            </div>
+            <div class="lightbox-stage">
+                <button class="lightbox-nav-btn lightbox-prev" id="lightbox-prev" aria-label="Précédent">&#10094;</button>
+                <div class="lightbox-media">
+                    <img class="lightbox-img" id="lightbox-img" src="" alt="">
+                    <div class="lightbox-counter" id="lightbox-counter">1 / 10</div>
+                </div>
+                <button class="lightbox-nav-btn lightbox-next" id="lightbox-next" aria-label="Suivant">&#10095;</button>
+            </div>
+            <div class="lightbox-thumbs" id="lightbox-thumbs">
+                <!-- Thumbs populated by JS -->
+            </div>
+        </div>
+    </div>
+
     <!-- Back to Top Button -->
     <a href="#" class="back-to-top" id="back-to-top" aria-label="Back to top">
         <svg viewBox="0 0 24 24"><path fill="currentColor" d="M7.41,15.41L12,10.83L16.59,15.41L18,14L12,8L6,14L7.41,15.41Z" /></svg>
@@ -244,6 +337,6 @@
         </div>
     </footer>
 
-    <script src="script.js?v=19"></script>
+    <script src="script.js?v=24"></script>
 </body>
 </html>

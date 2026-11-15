@@ -6,6 +6,8 @@ const translations = {
         navSkills: "Expertise",
         navProjects: "Work",
         navContact: "Contact",
+        navStatus: "Available",
+        navCta: "Let's Talk",
         heroTitle: "Imagin'Art",
         heroTag: "Graphic Designer &nbsp;·&nbsp; Workshop Designer &nbsp;·&nbsp; Illustrator Extensions Developer",
         heroRole: "Graphic Designer &bull; Workshop Designer &bull; Illustrator Extensions Developer",
@@ -52,6 +54,8 @@ const translations = {
         navSkills: "Expertise",
         navProjects: "Réalisations",
         navContact: "Contact",
+        navStatus: "Disponible",
+        navCta: "Me contacter",
         heroTitle: "Imagin'Art",
         heroTag: "Graphiste &nbsp;·&nbsp; Concepteur d'Atelier &nbsp;·&nbsp; Développeur d'Extensions Illustrator",
         heroRole: "Graphiste &bull; Concepteur d'Atelier &bull; Développeur d'Extensions Illustrator",
@@ -109,10 +113,81 @@ const softwares = [
 // 3. Projects
 const projects = [
     {
-        title: "Imagin'Art Suite V4.0",
-        category: "Extension Illustrator — Automatisation & Prépresse",
+        id: "suite",
+        title: {
+            fr: "Imagin'Art Suite V4.0",
+            en: "Imagin'Art Suite V4.0"
+        },
+        category: {
+            fr: "Extension Illustrator — Automatisation & Prépresse",
+            en: "Illustrator Extension — Automation & Prepress"
+        },
+        badge: {
+            fr: "Outil Pro",
+            en: "Pro Tool"
+        },
+        btnText: {
+            fr: "Visiter le site &rarr;",
+            en: "Visit website &rarr;"
+        },
         image: "img/logo_2.0.svg",
+        isLogo: true,
         link: "https://imaginart-design.github.io/ImaginArt-Suite/"
+    },
+    {
+        id: "wlidi",
+        title: {
+            fr: "Wlidi (وليدي) V1.0",
+            en: "Wlidi (وليدي) V1.0"
+        },
+        category: {
+            fr: "Application Desktop — Saisie Vocale Notes Massar",
+            en: "Desktop App — Voice Input Massar Grades"
+        },
+        badge: {
+            fr: "Application Gratuite",
+            en: "Free Application"
+        },
+        btnText: {
+            fr: "Visiter le site &rarr;",
+            en: "Visit website &rarr;"
+        },
+        image: "img/wlidi_header_logo.png",
+        isLogo: true,
+        link: "https://imaginart-design.github.io/Wlidi/"
+    },
+    {
+        id: "univers",
+        title: {
+            fr: "Blanchisserie Univers",
+            en: "Univers Laundry"
+        },
+        category: {
+            fr: "Refonte Signalétique & Habillage Visuel",
+            en: "Signage & Visual Identity Redesign"
+        },
+        badge: {
+            fr: "10 Vues",
+            en: "10 Views"
+        },
+        btnText: {
+            fr: "Explorer la galerie &rarr;",
+            en: "Explore gallery &rarr;"
+        },
+        image: "img/projects/projects_univers/cover2.webp",
+        isLogo: false,
+        gallery: [
+            "img/projects/projects_univers/vue_1.webp",
+            "img/projects/projects_univers/vue_2.webp",
+            "img/projects/projects_univers/vue_3.webp",
+            "img/projects/projects_univers/vue_4.webp",
+            "img/projects/projects_univers/vue_5.webp",
+            "img/projects/projects_univers/vue_6.webp",
+            "img/projects/projects_univers/vue_7.webp",
+            "img/projects/projects_univers/vue_8.webp",
+            "img/projects/projects_univers/vue_9.webp",
+            "img/projects/projects_univers/vue_10.webp"
+        ]
     }
 ];
 
@@ -127,7 +202,21 @@ document.addEventListener('DOMContentLoaded', () => {
     const hamburger = document.querySelector('.hamburger');
     const navLinks = document.querySelector('.nav-links');
 
+    // Lightbox DOM Elements
+    const lightboxModal = document.getElementById('project-lightbox');
+    const lightboxBackdrop = document.querySelector('.lightbox-backdrop');
+    const lightboxClose = document.getElementById('lightbox-close');
+    const lightboxPrev = document.getElementById('lightbox-prev');
+    const lightboxNext = document.getElementById('lightbox-next');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxTitle = document.getElementById('lightbox-title');
+    const lightboxCategory = document.getElementById('lightbox-category');
+    const lightboxCounter = document.getElementById('lightbox-counter');
+    const lightboxThumbs = document.getElementById('lightbox-thumbs');
+
     let currentLang = 'fr';
+    let activeProject = null;
+    let currentSlideIndex = 0;
 
     function setLanguage(lang) {
         currentLang = lang;
@@ -197,27 +286,171 @@ document.addEventListener('DOMContentLoaded', () => {
         if (projects.length === 0) {
             renderProjectsPlaceholder(lang);
         } else {
-            projects.forEach(project => {
+            projects.forEach((project, idx) => {
                 const item = document.createElement('div');
                 item.className = 'project-card glass-card';
-                item.style.padding = '24px';
-                item.style.textAlign = 'center';
-                item.style.cursor = project.link ? 'pointer' : 'default';
+                
+                const titleText = typeof project.title === 'object' ? (project.title[lang] || project.title.fr) : project.title;
+                const catText = typeof project.category === 'object' ? (project.category[lang] || project.category.fr) : project.category;
+                const badgeText = project.badge ? (typeof project.badge === 'object' ? (project.badge[lang] || project.badge.fr) : project.badge) : '';
+                const btnText = project.btnText ? (typeof project.btnText === 'object' ? (project.btnText[lang] || project.btnText.fr) : project.btnText) : (project.link ? 'Voir la page &rarr;' : 'Explorer &rarr;');
+
                 item.innerHTML = `
-                    <div style="background: rgba(10,10,10,0.6); border: 1px solid rgba(255,255,255,0.06); border-radius: 16px; padding: 28px 20px; margin-bottom: 16px; display: flex; align-items: center; justify-content: center; min-height: 180px;">
-                        <img src="${project.image}" alt="${project.title}" style="max-height: 130px; max-width: 100%; object-fit: contain; filter: drop-shadow(0 4px 12px rgba(0,0,0,0.4));">
+                    <div class="project-card-thumb">
+                        ${badgeText ? `
+                            <div class="project-badge">
+                                <span class="project-badge-dot"></span>
+                                <span>${badgeText}</span>
+                            </div>
+                        ` : ''}
+                        <img src="${project.image}" alt="${titleText}" class="${project.isLogo ? 'img-contain' : ''}" loading="lazy">
                     </div>
-                    <div class="project-info">
-                        <h3 class="project-title" style="font-size: 1.2rem; margin-bottom: 6px; color: var(--beige); font-weight: 700;">${project.title}</h3>
-                        <span class="project-category" style="font-size: 0.88rem; color: var(--brown); font-weight: 600;">${project.category}</span>
-                        ${project.link ? `<div style="margin-top:14px;"><a href="${project.link}" target="_blank" rel="noopener" style="font-size:0.82rem; color:var(--brown); border:1px solid var(--brown); padding:6px 16px; border-radius:20px; text-decoration:none; display:inline-block; transition:all 0.2s;" onmouseover="this.style.background='var(--brown)';this.style.color='#1a1810'" onmouseout="this.style.background='';this.style.color='var(--brown)'">Voir la page &rarr;</a></div>` : ''}
+                    <div class="project-card-body">
+                        <div>
+                            <h3 class="project-title">${titleText}</h3>
+                            <span class="project-category">${catText}</span>
+                        </div>
+                        <div class="project-action-btn">
+                            <span>${btnText}</span>
+                        </div>
                     </div>
                 `;
-                if (project.link) {
-                    item.addEventListener('click', () => { window.open(project.link, '_blank'); });
-                }
+
+                item.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    if (project.link) {
+                        window.open(project.link, '_blank');
+                    } else if (project.gallery && project.gallery.length > 0) {
+                        openLightbox(project);
+                    }
+                });
+
                 projectsGrid.appendChild(item);
             });
+        }
+    }
+
+    // ═══ Lightbox Carousel Engine ═══
+    function openLightbox(project) {
+        if (!lightboxModal || !project || !project.gallery || !project.gallery.length) return;
+        activeProject = project;
+        currentSlideIndex = 0;
+
+        const titleText = typeof project.title === 'object' ? (project.title[currentLang] || project.title.fr) : project.title;
+        const catText = typeof project.category === 'object' ? (project.category[currentLang] || project.category.fr) : project.category;
+
+        if (lightboxTitle) lightboxTitle.textContent = titleText;
+        if (lightboxCategory) lightboxCategory.textContent = catText;
+
+        // Render thumbs
+        if (lightboxThumbs) {
+            lightboxThumbs.innerHTML = '';
+            project.gallery.forEach((src, idx) => {
+                const thumb = document.createElement('div');
+                thumb.className = `lightbox-thumb ${idx === 0 ? 'active' : ''}`;
+                thumb.innerHTML = `<img src="${src}" alt="Vue ${idx + 1}" loading="lazy">`;
+                thumb.addEventListener('click', () => {
+                    goToSlide(idx);
+                });
+                lightboxThumbs.appendChild(thumb);
+            });
+        }
+
+        updateSlide();
+        lightboxModal.classList.add('active');
+        lightboxModal.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightboxModal() {
+        if (!lightboxModal) return;
+        lightboxModal.classList.remove('active');
+        lightboxModal.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+        activeProject = null;
+    }
+
+    function updateSlide() {
+        if (!activeProject || !activeProject.gallery) return;
+        const total = activeProject.gallery.length;
+        const currentSrc = activeProject.gallery[currentSlideIndex];
+
+        if (lightboxImg) {
+            lightboxImg.style.opacity = '0.3';
+            setTimeout(() => {
+                lightboxImg.src = currentSrc;
+                lightboxImg.style.opacity = '1';
+            }, 100);
+        }
+
+        if (lightboxCounter) {
+            lightboxCounter.textContent = `${currentSlideIndex + 1} / ${total}`;
+        }
+
+        // Update active thumb
+        if (lightboxThumbs) {
+            const allThumbs = lightboxThumbs.querySelectorAll('.lightbox-thumb');
+            allThumbs.forEach((th, idx) => {
+                th.classList.toggle('active', idx === currentSlideIndex);
+                if (idx === currentSlideIndex) {
+                    th.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+                }
+            });
+        }
+    }
+
+    function goToSlide(idx) {
+        if (!activeProject || !activeProject.gallery) return;
+        currentSlideIndex = idx;
+        updateSlide();
+    }
+
+    function nextSlide() {
+        if (!activeProject || !activeProject.gallery) return;
+        currentSlideIndex = (currentSlideIndex + 1) % activeProject.gallery.length;
+        updateSlide();
+    }
+
+    function prevSlide() {
+        if (!activeProject || !activeProject.gallery) return;
+        currentSlideIndex = (currentSlideIndex - 1 + activeProject.gallery.length) % activeProject.gallery.length;
+        updateSlide();
+    }
+
+    if (lightboxClose) lightboxClose.addEventListener('click', closeLightboxModal);
+    if (lightboxBackdrop) lightboxBackdrop.addEventListener('click', closeLightboxModal);
+    if (lightboxNext) lightboxNext.addEventListener('click', nextSlide);
+    if (lightboxPrev) lightboxPrev.addEventListener('click', prevSlide);
+
+    // Keyboard support
+    document.addEventListener('keydown', (e) => {
+        if (!lightboxModal || !lightboxModal.classList.contains('active')) return;
+        if (e.key === 'Escape') closeLightboxModal();
+        if (e.key === 'ArrowRight') nextSlide();
+        if (e.key === 'ArrowLeft') prevSlide();
+    });
+
+    // Touch Swipe support for mobile
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    if (lightboxModal) {
+        lightboxModal.addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+        }, { passive: true });
+
+        lightboxModal.addEventListener('touchend', (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+        }, { passive: true });
+    }
+
+    function handleSwipe() {
+        const threshold = 45;
+        if (touchEndX < touchStartX - threshold) {
+            nextSlide();
+        } else if (touchEndX > touchStartX + threshold) {
+            prevSlide();
         }
     }
 
@@ -282,10 +515,35 @@ document.addEventListener('DOMContentLoaded', () => {
         showNextWord();
     }
 
-    // Navbar scroll
+    // Navbar scroll (Smart Hide on Scroll Down / Show on Scroll Up)
+    let lastScrollY = window.scrollY;
+    const scrollThreshold = 10;
+
     window.addEventListener('scroll', () => {
-        navbar.classList.toggle('scrolled', window.scrollY > 50);
-    });
+        const currentScrollY = window.scrollY;
+        
+        // Effet de fond au scroll
+        navbar.classList.toggle('scrolled', currentScrollY > 40);
+
+        // Si le menu mobile est ouvert, ne pas masquer
+        if (navLinks && navLinks.classList.contains('active')) {
+            navbar.classList.remove('nav-hidden');
+            return;
+        }
+
+        // Tout en haut de page : toujours visible
+        if (currentScrollY <= 80) {
+            navbar.classList.remove('nav-hidden');
+        } else if (currentScrollY > lastScrollY + scrollThreshold) {
+            // L'utilisateur descend pour lire : on masque la capsule pour dégager 100% de l'écran
+            navbar.classList.add('nav-hidden');
+        } else if (currentScrollY < lastScrollY - scrollThreshold) {
+            // L'utilisateur remonte ou veut naviguer : réapparition fluide instantanée
+            navbar.classList.remove('nav-hidden');
+        }
+
+        lastScrollY = currentScrollY;
+    }, { passive: true });
 
     // Mobile menu
     if (hamburger && navLinks) {
@@ -297,6 +555,7 @@ document.addEventListener('DOMContentLoaded', () => {
             link.addEventListener('click', () => {
                 navLinks.classList.remove('active');
                 hamburger.classList.remove('active');
+                navbar.classList.remove('nav-hidden');
             });
         });
     }
