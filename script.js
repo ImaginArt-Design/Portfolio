@@ -167,26 +167,27 @@ const projects = [
             en: "Signage & Visual Identity Redesign"
         },
         badge: {
-            fr: "10 Vues",
-            en: "10 Views"
+            fr: "11 Vues",
+            en: "11 Views"
         },
         btnText: {
             fr: "Explorer la galerie &rarr;",
             en: "Explore gallery &rarr;"
         },
-        image: "img/projects/projects_univers/cover2.webp",
+        image: "img/projects/projects_univers/cover.webp",
         isLogo: false,
         gallery: [
-            "img/projects/projects_univers/vue_1.webp",
-            "img/projects/projects_univers/vue_2.webp",
-            "img/projects/projects_univers/vue_3.webp",
-            "img/projects/projects_univers/vue_4.webp",
-            "img/projects/projects_univers/vue_5.webp",
-            "img/projects/projects_univers/vue_6.webp",
-            "img/projects/projects_univers/vue_7.webp",
-            "img/projects/projects_univers/vue_8.webp",
-            "img/projects/projects_univers/vue_9.webp",
-            "img/projects/projects_univers/vue_10.webp"
+            "img/projects/projects_univers/vue (1).webp",
+            "img/projects/projects_univers/vue (2).webp",
+            "img/projects/projects_univers/vue (3).webp",
+            "img/projects/projects_univers/vue (4).webp",
+            "img/projects/projects_univers/vue (5).webp",
+            "img/projects/projects_univers/vue (6).webp",
+            "img/projects/projects_univers/vue (7).webp",
+            "img/projects/projects_univers/vue (8).webp",
+            "img/projects/projects_univers/vue (9).webp",
+            "img/projects/projects_univers/vue (10).webp",
+            "img/projects/projects_univers/vue (11).webp"
         ]
     }
 ];
