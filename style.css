@@ -1731,22 +1731,31 @@ html, body {
 
     /* ─── Skills Grid ─── */
     .skills-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 12px;
+    }
+
+    .skill-item,
+    .skill-item.glass-card {
+        padding: 16px 12px;
+        border-radius: 16px;
         gap: 10px;
     }
 
-    .skill-item.glass-card {
-        padding: 12px 10px;
-        gap: 8px;
+    .skill-icon {
+        width: 42px;
+        height: 42px;
     }
 
-    .skill-icon {
-        width: 30px;
-        height: 30px;
+    .skill-icon img,
+    .software-logo {
+        width: 42px !important;
+        height: 42px !important;
+        object-fit: contain;
     }
 
     .skill-name {
-        font-size: 0.82rem;
+        font-size: 0.85rem;
     }
 
     /* ─── Projects & Lightbox ─── */
@@ -1900,7 +1909,8 @@ html, body {
     }
 
     .skills-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 8px;
     }
 
     .hero-center-name {
