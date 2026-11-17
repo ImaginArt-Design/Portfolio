@@ -160,19 +160,23 @@ const projects = [
         id: "univers",
         title: {
             fr: "Blanchisserie Univers",
-            en: "Univers Laundry"
+            en: "Univers Laundry",
+            ar: "مصبنة يونيفرس (Univers)"
         },
         category: {
             fr: "Refonte Signalétique & Habillage Visuel",
-            en: "Signage & Visual Identity Redesign"
+            en: "Signage & Visual Identity Redesign",
+            ar: "تجديد اللوحات الإشهارية والهوية البصرية"
         },
         badge: {
             fr: "11 Vues",
-            en: "11 Views"
+            en: "11 Views",
+            ar: "11 صورة"
         },
         btnText: {
             fr: "Explorer la galerie &rarr;",
-            en: "Explore gallery &rarr;"
+            en: "Explore gallery &rarr;",
+            ar: "استكشف المعرض &rarr;"
         },
         image: "img/projects/projects_univers/cover.webp",
         isLogo: false,
@@ -188,6 +192,46 @@ const projects = [
             "img/projects/projects_univers/vue (9).webp",
             "img/projects/projects_univers/vue (10).webp",
             "img/projects/projects_univers/vue (11).webp"
+        ]
+    },
+    {
+        id: "logofolio",
+        title: {
+            fr: "Logofolio — Sélection de Logos",
+            en: "Logofolio — Curated Logo Collection",
+            ar: "لوغوفوليو — باقة مختارة من الشعارات"
+        },
+        category: {
+            fr: "Création de Logos & Identités Visuelles",
+            en: "Logo Design & Visual Identity",
+            ar: "تصميم الشعارات والهويات البصرية"
+        },
+        badge: {
+            fr: "13 Logos",
+            en: "13 Logos",
+            ar: "13 شعاراً"
+        },
+        btnText: {
+            fr: "Explorer la galerie &rarr;",
+            en: "Explore gallery &rarr;",
+            ar: "استكشف المعرض &rarr;"
+        },
+        image: "img/projects/LogoFolio/cover.webp",
+        isLogo: false,
+        gallery: [
+            "img/projects/LogoFolio/1 (1).webp",
+            "img/projects/LogoFolio/1 (2).webp",
+            "img/projects/LogoFolio/1 (3).webp",
+            "img/projects/LogoFolio/1 (4).webp",
+            "img/projects/LogoFolio/1 (5).webp",
+            "img/projects/LogoFolio/1 (6).webp",
+            "img/projects/LogoFolio/1 (7).webp",
+            "img/projects/LogoFolio/1 (8).webp",
+            "img/projects/LogoFolio/1 (9).webp",
+            "img/projects/LogoFolio/1 (10).webp",
+            "img/projects/LogoFolio/1 (11).webp",
+            "img/projects/LogoFolio/1 (12).webp",
+            "img/projects/LogoFolio/1 (13).webp"
         ]
     }
 ];
