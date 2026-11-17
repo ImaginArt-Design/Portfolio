@@ -14,8 +14,8 @@ const translations = {
         heroDescStart: "I design: ",
         heroWords: [
             "timeless brand identities & logos.",
-            "print art direction & packaging.",
-            "complete publishing & editorial systems.",
+            "book covers & publishing design.",
+            "complete editorial systems.",
             "automation extensions for Illustrator."
         ],
         heroBtn: "Explore My Work",
@@ -63,7 +63,7 @@ const translations = {
         heroWords: [
             "des identités visuelles durables.",
             "des systèmes de marque complets.",
-            "des packagings prêts à l'impression.",
+            "des couvertures de livres soignées.",
             "des extensions pour Adobe Illustrator."
         ],
         heroBtn: "Explorer mes réalisations",

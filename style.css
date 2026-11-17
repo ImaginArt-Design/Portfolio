@@ -35,6 +35,17 @@ body {
     position: relative;
 }
 
+/* ═══ TEXTURE TACTILE : GRAIN DE PAPIER D'ART (#10 & #13) ═══ */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='paperNoise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23paperNoise)' opacity='0.038'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 99;
+}
+
 /* Motif d'arrière-plan (Pattern) */
 .pattern-bg {
     position: fixed;
@@ -81,9 +92,11 @@ p {
     position: absolute;
     bottom: -15px;
     left: 0;
-    width: 60px;
-    height: 3px;
-    background-color: var(--brown);
+    width: 76px;
+    height: 5px;
+    background-image: radial-gradient(circle, var(--brown) 32%, transparent 35%);
+    background-size: 8px 5px;
+    background-repeat: repeat-x;
     border-radius: 2px;
 }
 html[lang="ar"] .section-title::after {
@@ -118,27 +131,38 @@ html[lang="ar"] .text-center .section-title::after {
 }
 
 .primary-btn {
-    background-color: var(--brown);
-    color: var(--dark);
-    box-shadow: 0 4px 15px rgba(166, 135, 99, 0.2);
+    background: linear-gradient(135deg, #b89872 0%, var(--brown) 100%);
+    color: #1a1816;
+    box-shadow: 
+        inset 0 1px 1px rgba(255, 255, 255, 0.32),
+        inset 0 -1px 1px rgba(0, 0, 0, 0.35),
+        0 6px 18px rgba(166, 135, 99, 0.25);
+    letter-spacing: 0.5px;
+    position: relative;
 }
 
 .primary-btn:hover {
-    background-color: var(--beige);
+    background: linear-gradient(135deg, #e4d8c4 0%, var(--beige) 100%);
     transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(215, 201, 174, 0.3);
+    box-shadow: 
+        inset 0 1px 1px rgba(255, 255, 255, 0.45),
+        inset 0 -1px 1px rgba(0, 0, 0, 0.25),
+        0 10px 26px rgba(215, 201, 174, 0.32);
 }
 
-/* Glassmorphism */
+/* Glassmorphism & Craft Letterpress Bevel */
 .glass-card {
-    background: var(--glass-bg);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border: 1px solid var(--glass-border);
+    background: linear-gradient(155deg, rgba(233, 224, 210, 0.055) 0%, rgba(20, 18, 14, 0.45) 100%);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid rgba(215, 201, 174, 0.16);
     border-radius: 24px;
     padding: 3rem;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), border-color 0.3s ease;
+    box-shadow: 
+        inset 0 1px 1px 0 rgba(255, 255, 255, 0.08),
+        inset 0 -1px 1px 0 rgba(0, 0, 0, 0.45),
+        0 12px 36px -6px rgba(0, 0, 0, 0.42);
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), border-color 0.3s ease, box-shadow 0.35s ease;
     position: relative;
     overflow: hidden;
     z-index: 1;
@@ -160,7 +184,12 @@ html[lang="ar"] .text-center .section-title::after {
 
 .glass-card:hover {
     transform: translateY(-8px);
-    border-color: rgba(166, 135, 99, 0.5);
+    border-color: rgba(215, 201, 174, 0.42);
+    box-shadow: 
+        inset 0 1px 1px 0 rgba(255, 255, 255, 0.12),
+        inset 0 -1px 1px 0 rgba(0, 0, 0, 0.5),
+        0 20px 45px -10px rgba(0, 0, 0, 0.55),
+        0 0 30px rgba(166, 135, 99, 0.15);
 }
 
 /* ═══ OPTION A : HEADER STUDIO & AGENCE (Full-Width) ═══ */
@@ -440,12 +469,12 @@ html[lang="ar"] .nav-links a::after {
     margin: 0 auto 34px;
 }
 
-/* Aura lumineuse dorée noble et calme */
+/* Aura lumineuse dorée noble et tactile */
 .hero-brand-aura {
     position: absolute;
-    width: 360px;
-    height: 250px;
-    background: radial-gradient(ellipse at center, rgba(166, 135, 99, 0.24) 0%, rgba(215, 201, 174, 0.05) 50%, transparent 70%);
+    width: 380px;
+    height: 260px;
+    background: radial-gradient(ellipse at center, rgba(166, 135, 99, 0.28) 0%, rgba(215, 201, 174, 0.08) 45%, transparent 70%);
     filter: blur(28px);
     pointer-events: none;
     border-radius: 50%;
@@ -522,13 +551,16 @@ html[lang="ar"] .nav-links a::after {
     background-clip: text;
 }
 
-/* Séparateur Doré */
+/* Séparateur Doré Halftone d'imprimerie (#4) */
 .hero-divider {
-    width: 80px;
-    height: 2px;
-    background: linear-gradient(to right, transparent, var(--brown), transparent);
+    width: 110px;
+    height: 5px;
+    background-image: radial-gradient(circle, var(--brown) 32%, transparent 35%);
+    background-size: 9px 5px;
+    background-repeat: repeat-x;
+    background-position: center;
     margin: 0 auto 28px;
-    border-radius: 2px;
+    opacity: 0.9;
 }
 
 /* ── Bouton Après le Nom ── */
@@ -739,8 +771,11 @@ html[lang="ar"] .signature-font {
 }
 
 .skill-item {
-    background: var(--glass-bg);
-    border: 1px solid var(--glass-border);
+    background: linear-gradient(145deg, rgba(233, 224, 210, 0.04) 0%, rgba(20, 18, 14, 0.6) 100%);
+    border: 1px solid rgba(215, 201, 174, 0.14);
+    box-shadow: 
+        inset 0 1px 0 0 rgba(255, 255, 255, 0.06),
+        0 6px 18px rgba(0, 0, 0, 0.3);
     border-radius: 20px;
     padding: 26px 18px;
     text-align: center;
@@ -753,10 +788,13 @@ html[lang="ar"] .signature-font {
 }
 
 .skill-item:hover {
-    background: rgba(166, 135, 99, 0.12);
+    background: linear-gradient(145deg, rgba(166, 135, 99, 0.16) 0%, rgba(20, 18, 14, 0.7) 100%);
     transform: translateY(-8px);
-    border-color: var(--beige);
-    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35);
+    border-color: rgba(215, 201, 174, 0.38);
+    box-shadow: 
+        inset 0 1px 0 0 rgba(255, 255, 255, 0.12),
+        0 14px 28px rgba(0, 0, 0, 0.4),
+        0 0 20px rgba(166, 135, 99, 0.2);
 }
 
 .skill-icon {
@@ -828,8 +866,12 @@ html[lang="ar"] .signature-font {
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    background: var(--glass-bg);
-    border: 1px solid var(--glass-border);
+    background: linear-gradient(160deg, rgba(233, 224, 210, 0.045) 0%, rgba(18, 16, 13, 0.85) 100%);
+    border: 1px solid rgba(215, 201, 174, 0.15);
+    box-shadow: 
+        inset 0 1px 1px 0 rgba(255, 255, 255, 0.07),
+        inset 0 -1px 1px 0 rgba(0, 0, 0, 0.4),
+        0 10px 28px -6px rgba(0, 0, 0, 0.45);
     cursor: pointer;
     transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
     text-decoration: none;
@@ -838,8 +880,12 @@ html[lang="ar"] .signature-font {
 
 .project-card:hover {
     transform: translateY(-8px);
-    border-color: var(--brown);
-    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.45);
+    border-color: rgba(215, 201, 174, 0.45);
+    box-shadow: 
+        inset 0 1px 1px 0 rgba(255, 255, 255, 0.12),
+        inset 0 -1px 1px 0 rgba(0, 0, 0, 0.5),
+        0 22px 42px -8px rgba(0, 0, 0, 0.6),
+        0 0 25px rgba(166, 135, 99, 0.16);
 }
 
 .project-card-thumb {
