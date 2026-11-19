@@ -1948,6 +1948,69 @@ html, body {
     }
 }
 
+/* Google Review Badge */
+.google-review-badge {
+    margin-top: 2.2rem;
+    padding: 1.6rem 1.8rem;
+    border-radius: 18px;
+    background: rgba(212, 175, 55, 0.05);
+    border: 1px solid rgba(212, 175, 55, 0.28);
+    text-align: center;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.google-review-stars {
+    color: #fbbf24;
+    font-size: 1.35rem;
+    letter-spacing: 3px;
+    margin-bottom: 6px;
+}
+
+.google-review-title {
+    font-size: 1.12rem;
+    font-weight: 700;
+    color: var(--cream);
+    margin-bottom: 6px;
+}
+
+.google-review-sub {
+    font-size: 0.92rem;
+    color: rgba(255, 255, 255, 0.65);
+    line-height: 1.5;
+    margin-bottom: 16px;
+}
+
+.google-review-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 11px 24px;
+    border-radius: 9999px;
+    background: #ffffff;
+    color: #0f172a !important;
+    font-size: 0.92rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.google-review-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(251, 191, 36, 0.35);
+    background: #f8fafc;
+}
+
+.footer-review-link a {
+    transition: all 0.3s ease;
+}
+
+.footer-review-link a:hover {
+    transform: translateY(-2px);
+    border-color: rgba(251, 191, 36, 0.5) !important;
+    background: rgba(251, 191, 36, 0.15) !important;
+}
+
 /* Petits écrans (< 380px : iPhone SE, anciens Galaxy) */
 @media (max-width: 380px) {
     .nav-logo-text {

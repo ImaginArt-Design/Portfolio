@@ -46,6 +46,10 @@ const translations = {
         contactNamePlaceholder: "Your Name",
         contactMessagePlaceholder: "Describe your project or production needs...",
         contactBtn: "Send via WhatsApp",
+        googleReviewTitle: "Certified Google Reviews (5.0 ★)",
+        googleReviewText: "Have a project in mind or already collaborated with me? Check out client reviews or share your experience.",
+        googleReviewBtn: "Leave a Google Review",
+        footerGoogleReview: "Certified Google Reviews (5.0 ★)",
         footerText: "© 2026 Imagin'Art — All rights reserved. Developed by Laabidi Abdelghani."
     },
     fr: {
@@ -94,6 +98,10 @@ const translations = {
         contactNamePlaceholder: "Votre Nom",
         contactMessagePlaceholder: "Décrivez votre projet, vos besoins en design ou en fabrication...",
         contactBtn: "Envoyer via WhatsApp",
+        googleReviewTitle: "Avis Clients Google Certifiés (5.0 ★)",
+        googleReviewText: "Vous avez un projet en tête ou nous avons déjà collaboré ? Découvrez les retours d'expérience ou laissez votre avis.",
+        googleReviewBtn: "Laisser un avis sur Google",
+        footerGoogleReview: "Avis Clients Google (5.0 ★)",
         footerText: "© 2026 Imagin'Art — Tous droits réservés. Développé par Laabidi Abdelghani."
     }
 };
